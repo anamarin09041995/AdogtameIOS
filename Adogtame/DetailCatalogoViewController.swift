@@ -10,6 +10,12 @@ import UIKit
 
 class DetailCatalogoViewController: UIViewController {
 
+    
+    
+    
+    @IBAction func adoptar(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
