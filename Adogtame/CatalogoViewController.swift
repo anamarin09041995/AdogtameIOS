@@ -11,12 +11,11 @@ import UIKit
 class CatalogoViewController: UIViewController, UITableViewDataSource {
 
     
-    
+    var data: [Mascota] = []
+    @IBOutlet var table: UITableView!
         
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,23 +41,29 @@ class CatalogoViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "catalogoCelda") as! CatalogoCell
+        let m = data[indexPath.row]
         
-        cell.nombre.text = "Nombre"
-        cell.tamanio.text = "Tamaño"
-        cell.raza.text = "Raza"
-        cell.edad.text = "Edad"
+        cell.nombre.text = m.nombre
+        cell.tamanio.text = m.tamanio
+        cell.raza.text = m.raza
+        cell.edad.text = m.edad
         
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailCatalogo" {
+            
+            let selected = table.indexPathForSelectedRow?.row
+            let destination = segue.destination as! DetailCatalogoViewController
+            
+            destination.mascota = data[selected!]
             //let registro = segue.destination as! RegistroViewController
         }
         //Se pasan los datos de las variables creadas en el registroViewController para obtener la informacion

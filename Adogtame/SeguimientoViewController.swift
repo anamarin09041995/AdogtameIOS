@@ -1,24 +1,15 @@
 //
-//  DetailCatalogoViewController.swift
+//  SeguimientoViewController.swift
 //  Adogtame
 //
-//  Created by Anita Martínez on 4/05/17.
+//  Created by Anita Martínez on 5/05/17.
 //  Copyright © 2017 Anita Martínez. All rights reserved.
 //
 
 import UIKit
 
-class DetailCatalogoViewController: UIViewController {
+class SeguimientoViewController: UIViewController {
 
-    
-    var mascota: Mascota!
-    
-    
-    
-    @IBAction func adoptar(_ sender: Any) {
-        
-        navigationController?.popViewController(animated: true)
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,8 +31,5 @@ class DetailCatalogoViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    
-    
 
 }

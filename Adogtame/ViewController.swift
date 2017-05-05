@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
@@ -29,15 +30,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func login(_ sender: Any) {
-        let password = pass.text!
-        let username = user.text!
         
-        if(username ==  "anamarin@unicauca.edu.co" && password == "123456"){
-            userD.set(username, forKey: "username")
-            userD.set(password, forKey: "password")
-            userD.set(true, forKey: "logged")
-            performSegue(withIdentifier: "login", sender: nil)
+        let url = ""
+        let parameters: Parameters=[
+            "username" : user.text!,
+            "password" : pass.text!
+        ]
+        
+        Alamofire.request(url, method:.post, parameters: parameters, encoding: JSONEncoding.default).responseJSON {(reponse) in
+        
         }
+        
+        //if(username ==  "anamarin@unicauca.edu.co" && password == "123456"){
+          //  userD.set(username, forKey: "username")
+           // userD.set(password, forKey: "password")
+            //userD.set(true, forKey: "logged")
+            //performSegue(withIdentifier: "login", sender: nil)
+        //}
     }
 
     override func didReceiveMemoryWarning() {

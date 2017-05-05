@@ -16,11 +16,13 @@
 		2DA2BCF21EBA22A30072748F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA2BCF01EBA22A30072748F /* LaunchScreen.storyboard */; };
 		2DA2BCFA1EBA318A0072748F /* Catalogo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA2BCF91EBA318A0072748F /* Catalogo.storyboard */; };
 		2DBC3B491EBB5D16007AD6FE /* CatalogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3B481EBB5D16007AD6FE /* CatalogoViewController.swift */; };
-		2DBC3B4C1EBB5F3E007AD6FE /* Mascotas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3B4B1EBB5F3E007AD6FE /* Mascotas.swift */; };
+		2DBC3B4C1EBB5F3E007AD6FE /* Mascota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3B4B1EBB5F3E007AD6FE /* Mascota.swift */; };
 		2DBC3B4F1EBB652D007AD6FE /* CatalogoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC3B4E1EBB652D007AD6FE /* CatalogoCell.swift */; };
 		2DC562FA1EBACC0900B68AE3 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC562F91EBACC0900B68AE3 /* RegistroViewController.swift */; };
 		2DDE2ED21EBBDCA000E9835A /* DetailCatalogo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDE2ED11EBBDCA000E9835A /* DetailCatalogo.storyboard */; };
 		2DDE2ED41EBBE16800E9835A /* DetailCatalogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDE2ED31EBBE16800E9835A /* DetailCatalogoViewController.swift */; };
+		2DE6DCF61EBD2D9600E718F6 /* SeguimientoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE6DCF51EBD2D9600E718F6 /* SeguimientoCell.swift */; };
+		2DE6DCF81EBD2DD000E718F6 /* SeguimientoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE6DCF71EBD2DD000E718F6 /* SeguimientoViewController.swift */; };
 		2DFF7F651EBB92D200E41236 /* Fundaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFF7F641EBB92D200E41236 /* Fundaciones.swift */; };
 		2DFF7F771EBB9D7400E41236 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DFF7F761EBB9D7400E41236 /* avatar.png */; };
 		2DFF7F791EBB9D8200E41236 /* padlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DFF7F781EBB9D8200E41236 /* padlock.png */; };
@@ -32,6 +34,7 @@
 		2DFF7F851EBB9F4800E41236 /* phone-contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DFF7F7F1EBB9F4800E41236 /* phone-contact.png */; };
 		2DFF7F871EBBA2A500E41236 /* VoluntariadoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFF7F861EBBA2A500E41236 /* VoluntariadoCell.swift */; };
 		2DFF7F891EBBA2E300E41236 /* VoluntariadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFF7F881EBBA2E300E41236 /* VoluntariadoViewController.swift */; };
+		ACB66F910D487DB29B9DD7FB /* Pods_Adogtame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FA7C6F429958253E927CE2 /* Pods_Adogtame.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,11 +49,13 @@
 		2DA2BCF31EBA22A30072748F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DA2BCF91EBA318A0072748F /* Catalogo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Catalogo.storyboard; sourceTree = "<group>"; };
 		2DBC3B481EBB5D16007AD6FE /* CatalogoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogoViewController.swift; sourceTree = "<group>"; };
-		2DBC3B4B1EBB5F3E007AD6FE /* Mascotas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mascotas.swift; sourceTree = "<group>"; };
+		2DBC3B4B1EBB5F3E007AD6FE /* Mascota.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mascota.swift; sourceTree = "<group>"; };
 		2DBC3B4E1EBB652D007AD6FE /* CatalogoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogoCell.swift; sourceTree = "<group>"; };
 		2DC562F91EBACC0900B68AE3 /* RegistroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		2DDE2ED11EBBDCA000E9835A /* DetailCatalogo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailCatalogo.storyboard; sourceTree = "<group>"; };
 		2DDE2ED31EBBE16800E9835A /* DetailCatalogoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCatalogoViewController.swift; sourceTree = "<group>"; };
+		2DE6DCF51EBD2D9600E718F6 /* SeguimientoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeguimientoCell.swift; sourceTree = "<group>"; };
+		2DE6DCF71EBD2DD000E718F6 /* SeguimientoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeguimientoViewController.swift; sourceTree = "<group>"; };
 		2DFF7F641EBB92D200E41236 /* Fundaciones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fundaciones.swift; sourceTree = "<group>"; };
 		2DFF7F761EBB9D7400E41236 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = avatar.png; path = ../../../Imagenes_anita/avatar.png; sourceTree = "<group>"; };
 		2DFF7F781EBB9D8200E41236 /* padlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = padlock.png; path = ../../../Imagenes_anita/padlock.png; sourceTree = "<group>"; };
@@ -62,6 +67,9 @@
 		2DFF7F7F1EBB9F4800E41236 /* phone-contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "phone-contact.png"; path = "../../../Imagenes_anita/phone-contact.png"; sourceTree = "<group>"; };
 		2DFF7F861EBBA2A500E41236 /* VoluntariadoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoluntariadoCell.swift; sourceTree = "<group>"; };
 		2DFF7F881EBBA2E300E41236 /* VoluntariadoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoluntariadoViewController.swift; sourceTree = "<group>"; };
+		308CF98E0346024F71033156 /* Pods-Adogtame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adogtame.release.xcconfig"; path = "Pods/Target Support Files/Pods-Adogtame/Pods-Adogtame.release.xcconfig"; sourceTree = "<group>"; };
+		59FA7C6F429958253E927CE2 /* Pods_Adogtame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Adogtame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB56D55CF8D8A4DC35423BA3 /* Pods-Adogtame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adogtame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Adogtame/Pods-Adogtame.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB66F910D487DB29B9DD7FB /* Pods_Adogtame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +89,8 @@
 			children = (
 				2DA2BCE61EBA22A30072748F /* Adogtame */,
 				2DA2BCE51EBA22A30072748F /* Products */,
+				ACC2A122FE31A24017782DF2 /* Pods */,
+				991C883368F7A55DD5EE037A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +105,7 @@
 		2DA2BCE61EBA22A30072748F /* Adogtame */ = {
 			isa = PBXGroup;
 			children = (
+				2DE6DCF41EBD2C5700E718F6 /* Net */,
 				2DBC3B4D1EBB64FD007AD6FE /* Cells */,
 				2DBC3B4A1EBB5F20007AD6FE /* Models */,
 				2DBC3B331EBB5770007AD6FE /* Imagenes */,
@@ -110,6 +122,7 @@
 				2DFF7F881EBBA2E300E41236 /* VoluntariadoViewController.swift */,
 				2DDE2ED11EBBDCA000E9835A /* DetailCatalogo.storyboard */,
 				2DDE2ED31EBBE16800E9835A /* DetailCatalogoViewController.swift */,
+				2DE6DCF71EBD2DD000E718F6 /* SeguimientoViewController.swift */,
 			);
 			path = Adogtame;
 			sourceTree = "<group>";
@@ -132,7 +145,7 @@
 		2DBC3B4A1EBB5F20007AD6FE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2DBC3B4B1EBB5F3E007AD6FE /* Mascotas.swift */,
+				2DBC3B4B1EBB5F3E007AD6FE /* Mascota.swift */,
 				2DFF7F641EBB92D200E41236 /* Fundaciones.swift */,
 			);
 			name = Models;
@@ -144,8 +157,33 @@
 				2DBC3B4E1EBB652D007AD6FE /* CatalogoCell.swift */,
 				2D9112951EBB7EED00745AA6 /* DonacionesCell.swift */,
 				2DFF7F861EBBA2A500E41236 /* VoluntariadoCell.swift */,
+				2DE6DCF51EBD2D9600E718F6 /* SeguimientoCell.swift */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		2DE6DCF41EBD2C5700E718F6 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Net;
+			sourceTree = "<group>";
+		};
+		991C883368F7A55DD5EE037A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59FA7C6F429958253E927CE2 /* Pods_Adogtame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACC2A122FE31A24017782DF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB56D55CF8D8A4DC35423BA3 /* Pods-Adogtame.debug.xcconfig */,
+				308CF98E0346024F71033156 /* Pods-Adogtame.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DA2BCF61EBA22A30072748F /* Build configuration list for PBXNativeTarget "Adogtame" */;
 			buildPhases = (
+				23737B68131F4C7A1929E3E6 /* [CP] Check Pods Manifest.lock */,
 				2DA2BCE01EBA22A20072748F /* Sources */,
 				2DA2BCE11EBA22A20072748F /* Frameworks */,
 				2DA2BCE21EBA22A20072748F /* Resources */,
+				E85BE1CEE686011525CFE436 /* [CP] Embed Pods Frameworks */,
+				8ED310AD0F56FF407B50BD25 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,6 +266,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23737B68131F4C7A1929E3E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8ED310AD0F56FF407B50BD25 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Adogtame/Pods-Adogtame-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E85BE1CEE686011525CFE436 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Adogtame/Pods-Adogtame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2DA2BCE01EBA22A20072748F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -236,11 +325,13 @@
 				2DFF7F871EBBA2A500E41236 /* VoluntariadoCell.swift in Sources */,
 				2DC562FA1EBACC0900B68AE3 /* RegistroViewController.swift in Sources */,
 				2D9112981EBB7F5500745AA6 /* DonacionesViewController.swift in Sources */,
+				2DE6DCF81EBD2DD000E718F6 /* SeguimientoViewController.swift in Sources */,
+				2DE6DCF61EBD2D9600E718F6 /* SeguimientoCell.swift in Sources */,
 				2DBC3B4F1EBB652D007AD6FE /* CatalogoCell.swift in Sources */,
 				2DA2BCE81EBA22A30072748F /* AppDelegate.swift in Sources */,
 				2D9112961EBB7EED00745AA6 /* DonacionesCell.swift in Sources */,
 				2DDE2ED41EBBE16800E9835A /* DetailCatalogoViewController.swift in Sources */,
-				2DBC3B4C1EBB5F3E007AD6FE /* Mascotas.swift in Sources */,
+				2DBC3B4C1EBB5F3E007AD6FE /* Mascota.swift in Sources */,
 				2DFF7F891EBBA2E300E41236 /* VoluntariadoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +455,7 @@
 		};
 		2DA2BCF71EBA22A30072748F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB56D55CF8D8A4DC35423BA3 /* Pods-Adogtame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Adogtame/Info.plist;
@@ -376,6 +468,7 @@
 		};
 		2DA2BCF81EBA22A30072748F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 308CF98E0346024F71033156 /* Pods-Adogtame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Adogtame/Info.plist;
