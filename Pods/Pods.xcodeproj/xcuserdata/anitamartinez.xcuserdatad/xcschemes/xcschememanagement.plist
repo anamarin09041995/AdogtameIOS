@@ -9,7 +9,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>KDCircularProgress.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Adogtame.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SCLAlertView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>libwebp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5631F0EC2E088BA3E8B454D652A19F3F</key>
+		<key>322428ECC8C5EC71F14C92233787C7AC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7415EEA802BE7407C670CFEEB3B49FCA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7FE9916FD6C8F77A5D355EFD018C0419</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A79DC8F5606F6D28D8D17C45867D0779</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECCD2A306CD222A85F0893A1EEBAF03B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

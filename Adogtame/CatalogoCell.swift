@@ -13,6 +13,7 @@ class CatalogoCell: UITableViewCell {
     
     
     @IBOutlet weak var img: UIImageView!
+    
     @IBOutlet weak var nombre: UILabel!
     
     @IBOutlet weak var edad: UILabel!

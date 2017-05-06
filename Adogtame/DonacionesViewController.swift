@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DonacionesViewController: UIViewController, UITableViewDataSource {
 
-    
+    var data: [Fundaciones] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,19 +40,20 @@ class DonacionesViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "donacionesCelda") as! DonacionesCell
+        let f = data[indexPath.row]
         
-        cell.nombre.text = "Nombre"
-        cell.direccion.text = "Direccion"
-        cell.contacto.text = "Contacto"
+        cell.nombre.text = f.nombre
+        cell.direccion.text = f.direccion
+        cell.contacto.text = "\(f.contacto)"
+        cell.img.sd_setImage(with: URL(string:f.imagen))
         
         return cell
     }
-
 
 }

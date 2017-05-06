@@ -17,7 +17,7 @@ class Fundaciones {
     var descripcion: String!
     var imagen: String!
     
-    init(nombre: String, direccion: String, descripcion: String, horario: String, tamanio: String, edad: String, imagen: String, contacto: Int){
+    init(nombre: String, direccion: String, descripcion: String, horario: String, imagen: String, contacto: Int){
         
         self.nombre = nombre
         self.direccion = direccion

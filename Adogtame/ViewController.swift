@@ -19,13 +19,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //btnRegi.layer.cornerRadius = 10
         userD = UserDefaults()
         
-        let username =  userD.object(forKey: "username") as? String
-        user.text = username
-        let password = userD.object(forKey: "password") as? String
-        pass.text = password
+        let email =  userD.object(forKey: "email") as? String
+        user.text = email
+        let passw = userD.object(forKey: "passw") as? String
+        pass.text = passw
         
     }
     
@@ -41,12 +40,16 @@ class ViewController: UIViewController {
         
         }
         
-        //if(username ==  "anamarin@unicauca.edu.co" && password == "123456"){
-          //  userD.set(username, forKey: "username")
-           // userD.set(password, forKey: "password")
-            //userD.set(true, forKey: "logged")
-            //performSegue(withIdentifier: "login", sender: nil)
-        //}
+        let passw = pass.text!
+        let email = user.text!
+
+        
+        if(email ==  "anamarin@unicauca.edu.co" && passw == "123456"){
+            userD.set(email, forKey: "email")
+            userD.set(passw, forKey: "passw")
+            userD.set(true, forKey: "logged")
+            performSegue(withIdentifier: "login", sender: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {

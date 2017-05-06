@@ -1,12 +1,49 @@
 PODS:
   - Alamofire (4.4.0)
+  - KDCircularProgress (1.5.2)
+  - libwebp (0.5.1):
+    - libwebp/core (= 0.5.1)
+    - libwebp/dec (= 0.5.1)
+    - libwebp/demux (= 0.5.1)
+    - libwebp/dsp (= 0.5.1)
+    - libwebp/enc (= 0.5.1)
+    - libwebp/mux (= 0.5.1)
+    - libwebp/utils (= 0.5.1)
+    - libwebp/webp (= 0.5.1)
+  - libwebp/core (0.5.1):
+    - libwebp/webp
+  - libwebp/dec (0.5.1):
+    - libwebp/core
+  - libwebp/demux (0.5.1):
+    - libwebp/core
+  - libwebp/dsp (0.5.1):
+    - libwebp/core
+  - libwebp/enc (0.5.1):
+    - libwebp/core
+  - libwebp/mux (0.5.1):
+    - libwebp/core
+  - libwebp/utils (0.5.1):
+    - libwebp/core
+  - libwebp/webp (0.5.1)
+  - SCLAlertView (0.7.0)
+  - SDWebImage/Core (4.0.0)
+  - SDWebImage/WebP (4.0.0):
+    - libwebp
+    - SDWebImage/Core
 
 DEPENDENCIES:
   - Alamofire
+  - KDCircularProgress
+  - SCLAlertView
+  - SDWebImage/WebP
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  KDCircularProgress: 12f677b2deb02409ab48c6cae1898d146b8ad549
+  libwebp: b9126f8982a95370cf4eaad9bb3fefd57f052c15
+  SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: bb60070b56397c80d756d722c0f947462dfa8ab7
+PODFILE CHECKSUM: af6faa4b59c7f8a11d74208b3a06ceba9a7c2020
 
 COCOAPODS: 1.2.1

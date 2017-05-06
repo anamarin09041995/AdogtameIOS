@@ -18,7 +18,8 @@ class VoluntariadoCell: UITableViewCell {
     
     @IBOutlet weak var direccion: UILabel!
     
-    @IBOutlet weak var descripcion: UILabel!
+    
+    @IBOutlet weak var descripcion: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

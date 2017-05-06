@@ -35,7 +35,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAA-cy-o60">
                                 <rect key="frame" x="16" y="89" width="343" height="38.5"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.50360365316901412" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.9137254901960784" green="0.11764705882352941" blue="0.38823529411764707" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Hz-aA-4yK">
@@ -48,7 +48,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fundacion:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O30-83-ofP">
                                 <rect key="frame" x="49" y="301.5" width="89" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.49832196299999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.92223261443661975" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house.png" translatesAutoresizingMaskIntoConstraints="NO" id="5I2-8r-9UL">
@@ -70,13 +70,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripción:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSi-NX-iBZ">
                                 <rect key="frame" x="20" y="375.5" width="101.5" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacto:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOy-M4-1XN">
                                 <rect key="frame" x="49" y="331" width="85" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGf-oU-MhF">
@@ -93,6 +93,9 @@
                                         <state key="normal" title="Adoptar">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="adoptar:" destination="96z-NI-pBY" eventType="touchUpInside" id="yfq-k1-ink"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -149,6 +152,13 @@
                             <constraint firstItem="md0-5K-2zj" firstAttribute="leading" secondItem="ana-nv-csb" secondAttribute="leading" id="zRG-Dx-6BD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contacto" destination="kOy-M4-1XN" id="X4b-Gd-0a6"/>
+                        <outlet property="descripcion" destination="FSi-NX-iBZ" id="gcJ-xE-YNE"/>
+                        <outlet property="fundacion" destination="O30-83-ofP" id="lTl-bB-DWC"/>
+                        <outlet property="img" destination="8Hz-aA-4yK" id="opO-nx-X0c"/>
+                        <outlet property="nombre" destination="uAA-cy-o60" id="wMI-Rs-XYI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVQ-0Y-48n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
