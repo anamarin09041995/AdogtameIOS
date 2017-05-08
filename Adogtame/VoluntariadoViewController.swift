@@ -10,7 +10,7 @@ import UIKit
 import SCLAlertView
 import SDWebImage
 
-class VoluntariadoViewController: UIViewController, UITableViewDataSource{
+class VoluntariadoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     var data: [Fundaciones] = []
     
@@ -55,7 +55,7 @@ class VoluntariadoViewController: UIViewController, UITableViewDataSource{
         
         cell.nombre.text = f.nombre
         cell.direccion.text = f.direccion
-        cell.contacto.text = "\(f.contacto)"
+        cell.contacto.text = "\(f.contacto!)"
         cell.descripcion.text = f.descripcion
         cell.img.sd_setImage(with: URL(string:f.imagen))
         
@@ -64,7 +64,6 @@ class VoluntariadoViewController: UIViewController, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let f = data[indexPath.row]
         
         let appearance = SCLAlertView.SCLAppearance(
@@ -84,8 +83,9 @@ class VoluntariadoViewController: UIViewController, UITableViewDataSource{
             self.navigationController?.popViewController(animated: true)
         }
         
-        alertView.showTitle(f.nombre, subTitle: "Gracias por ser parte del cambio! Nuestros horarios son \(f.horario)", style: .notice, colorStyle: 0x08AE9E, colorTextButton: 0xFFFFFF)
+        alertView.showTitle("Fundacion \(f.nombre!)", subTitle: "Gracias por ser parte del cambio! Nuestros horarios son \(f.horario!)", style: .notice, colorStyle: 0x08AE9E, colorTextButton: 0xFFFFFF)
 
     }
+    
 
 }

@@ -14,7 +14,8 @@ class SeguimientoCell: UITableViewCell {
     
     @IBOutlet weak var nombre: UILabel!
     
-    @IBOutlet weak var descripcion: UILabel!
+    
+    @IBOutlet weak var descripcion: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

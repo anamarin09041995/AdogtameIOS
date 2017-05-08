@@ -12,14 +12,14 @@ class VoluntariadoCell: UITableViewCell {
 
     @IBOutlet weak var img: UIImageView!
     
-    @IBOutlet weak var nombre: UILabel!
-    
-    @IBOutlet weak var contacto: UILabel!
+    @IBOutlet weak var nombre: UITextView!
     
     @IBOutlet weak var direccion: UILabel!
     
+    @IBOutlet weak var contacto: UILabel!
     
     @IBOutlet weak var descripcion: UITextView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

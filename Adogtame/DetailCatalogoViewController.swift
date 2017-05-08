@@ -47,7 +47,7 @@ class DetailCatalogoViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }
         
-        alertView.showTitle(mascota.nombre, subTitle: "Gracias por adoptar! Se envió a tu correo un formulario de adopción", style: .notice, colorStyle: 0x08AE9E, colorTextButton: 0xFFFFFF)
+        alertView.showTitle("Gracias por adoptar a \(mascota.nombre!)", subTitle: "Gracias por adoptar! Se envió a tu correo un formulario de adopción", style: .notice, colorStyle: 0x08AE9E, colorTextButton: 0xFFFFFF)
     }
     
     
@@ -55,8 +55,9 @@ class DetailCatalogoViewController: UIViewController {
         super.viewDidLoad()
         nombre.text = mascota.nombre
         descripcion.text = mascota.descripcion
-        contacto.text = "\(mascota.contacto)"
+        contacto.text = "\(mascota.contacto!)"
         fundacion.text = mascota.fundacion
+        img.sd_setImage(with: URL(string:mascota.imagen))
         
     }
 

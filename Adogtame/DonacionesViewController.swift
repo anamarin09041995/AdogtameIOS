@@ -50,7 +50,7 @@ class DonacionesViewController: UIViewController, UITableViewDataSource {
         
         cell.nombre.text = f.nombre
         cell.direccion.text = f.direccion
-        cell.contacto.text = "\(f.contacto)"
+        cell.contacto.text = "\(f.contacto!)"
         cell.img.sd_setImage(with: URL(string:f.imagen))
         
         return cell
