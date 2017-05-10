@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.4.0)
+  - CardIO (5.4.1)
   - KDCircularProgress (1.5.2)
   - libwebp (0.5.1):
     - libwebp/core (= 0.5.1)
@@ -25,6 +26,12 @@ PODS:
   - libwebp/utils (0.5.1):
     - libwebp/core
   - libwebp/webp (0.5.1)
+  - PayPal-iOS-SDK (2.16.3):
+    - PayPal-iOS-SDK/CardIO (= 2.16.3)
+    - PayPal-iOS-SDK/Core (= 2.16.3)
+  - PayPal-iOS-SDK/CardIO (2.16.3):
+    - CardIO (~> 5.4.1)
+  - PayPal-iOS-SDK/Core (2.16.3)
   - SCLAlertView (0.7.0)
   - SDWebImage/Core (4.0.0)
   - SDWebImage/WebP (4.0.0):
@@ -34,16 +41,19 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - KDCircularProgress
+  - PayPal-iOS-SDK
   - SCLAlertView
   - SDWebImage/WebP
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
   KDCircularProgress: 12f677b2deb02409ab48c6cae1898d146b8ad549
   libwebp: b9126f8982a95370cf4eaad9bb3fefd57f052c15
+  PayPal-iOS-SDK: db237a752c0b388b93a0b9915b30e26878732bdb
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: af6faa4b59c7f8a11d74208b3a06ceba9a7c2020
+PODFILE CHECKSUM: 93fef6a461cec5f5e69d1a9ff2852efea2ade28b
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.2.0

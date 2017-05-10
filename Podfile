@@ -8,6 +8,7 @@ target 'Adogtame' do
    pod ‘SDWebImage/WebP’
    pod 'SCLAlertView'
    pod 'KDCircularProgress'
+   pod 'PayPal-iOS-SDK'
   # Pods for Adogtame
 
 end
