@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,7 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        return true
+        PayPalMobile.initializeWithClientIds(forEnvironments: [PayPalEnvironmentProduction: "Afi-i4v7uGpSmlvMQpF6NP-2jVDkpufB5c7QkfgyJRvl18J2BnEU33leiFT9koi2fHUNetvH3o6ZpFi3",
+                                                               PayPalEnvironmentSandbox: "gmcruz@gmail.com"])
+
+            return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

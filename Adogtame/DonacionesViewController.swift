@@ -12,8 +12,25 @@ import SDWebImage
 class DonacionesViewController: UIViewController, UITableViewDataSource {
 
     var data: [Fundaciones] = []
+    var api:MascotasApi!
+   
+    @IBOutlet weak var table: UITableView!
+    
+    
     override func viewDidLoad() {
+    
         super.viewDidLoad()
+        
+        api = MascotasApi()
+        api.ListarFundaciones{(arrayFundaciones) in
+            self.data = arrayFundaciones
+            print(self.data)
+            self.table.reloadData()
+            
+            
+        }
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -55,5 +72,22 @@ class DonacionesViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DonacionSegue" {
+            
+            let selected = table.indexPathForSelectedRow?.row
+            let destination = segue.destination as! PaymentViewController
+            
+            destination.fundacion = data[selected!]
+            
+            //let registro = segue.destination as! RegistroViewController
+        }
+        //Se pasan los datos de las variables creadas en el registroViewController para obtener la informacion
+    }
+
+    
+    
+    
 
 }

@@ -12,12 +12,12 @@ class Fundaciones {
     
     var nombre: String!
     var direccion: String!
-    var contacto: Int!
+    var contacto: Int64!
     var horario: String!
     var descripcion: String!
     var imagen: String!
     
-    init(nombre: String, direccion: String, descripcion: String, horario: String, imagen: String, contacto: Int){
+    init(nombre: String, direccion: String, descripcion: String, horario: String, imagen: String, contacto: Int64){
         
         self.nombre = nombre
         self.direccion = direccion

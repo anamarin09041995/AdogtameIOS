@@ -9,6 +9,7 @@ target 'Adogtame' do
    pod 'SCLAlertView'
    pod 'KDCircularProgress'
    pod 'PayPal-iOS-SDK'
+   pod ‘DLRadioButton’
   # Pods for Adogtame
 
 end

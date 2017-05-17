@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var pass: UITextField!
     
     var userD: UserDefaults!
+    var api1:UsuariosApi!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,10 +46,21 @@ class ViewController: UIViewController {
         let email = user.text!
 
         
+        api1 = UsuariosApi()
+        api1.Login(email: email , password: passw){(arrayUsuarios) in
+            print(arrayUsuarios)
+            
+        }
+    
+        
+        
+        
         if(email ==  "anamarin@unicauca.edu.co" && passw == "123456"){
             userD.set(email, forKey: "email")
             userD.set(passw, forKey: "passw")
             userD.set(true, forKey: "logged")
+            print(userD.string(forKey: "email")!)
+            
             performSegue(withIdentifier: "login", sender: nil)
         }
     }

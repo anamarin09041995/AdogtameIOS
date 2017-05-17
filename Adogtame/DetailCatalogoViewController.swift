@@ -11,8 +11,8 @@ import SCLAlertView
 import SDWebImage
 
 class DetailCatalogoViewController: UIViewController {
-
     
+
     var mascota: Mascota!
     
     
@@ -27,7 +27,7 @@ class DetailCatalogoViewController: UIViewController {
     @IBOutlet weak var fundacion: UILabel!
     
     
-    @IBAction func adoptar(_ sender: Any) {
+    /*@IBAction func adoptar(_ sender: Any) {
         //let mascota = data[indexPath.row]
         
         let appearance = SCLAlertView.SCLAppearance(
@@ -49,18 +49,36 @@ class DetailCatalogoViewController: UIViewController {
         
         alertView.showTitle("Gracias por adoptar a \(mascota.nombre!)", subTitle: "Gracias por adoptar! Se envió a tu correo un formulario de adopción", style: .notice, colorStyle: 0x08AE9E, colorTextButton: 0xFFFFFF)
     }
+    */
+    
+   
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nombre.text = mascota.nombre
-        descripcion.text = mascota.descripcion
+       // descripcion.text = mascota.descripcion
         contacto.text = "\(mascota.contacto!)"
         fundacion.text = mascota.fundacion
         img.sd_setImage(with: URL(string:mascota.imagen))
         
+        
+        
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+       
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

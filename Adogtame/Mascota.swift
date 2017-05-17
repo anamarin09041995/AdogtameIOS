@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Mascota {
+class Mascota{
     
     var nombre: String!
     var raza: String!
@@ -17,9 +17,9 @@ class Mascota {
     var tamanio: String!
     var edad: String!
     var imagen: String!
-    var contacto: Int!
+    var contacto: Int64!
     
-    init(nombre: String, raza: String, descripcion: String, fundacion: String, tamanio: String, edad: String, imagen: String, contacto: Int){
+    init(nombre: String, raza: String, descripcion: String, fundacion: String, tamanio: String, edad: String, imagen: String, contacto: Int64){
         
         self.nombre = nombre
         self.raza = raza

@@ -7,23 +7,42 @@
 //
 
 import UIKit
+import Alamofire
 import SDWebImage
 
-class CatalogoViewController: UIViewController, UITableViewDataSource {
 
+class CatalogoViewController: UIViewController, UITableViewDataSource {
+    
+    var data1 = [NSMutableDictionary]()
     
     var data: [Mascota] = []
+    
     @IBOutlet var table: UITableView!
-        
+    
+    var api:MascotasApi!
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        data = [
-            Mascota(nombre: "Tango", raza: "Criollo", descripcion: "Tango fue encontrado en estado de desnutricion. Ahora se encuentra recuperado y en busca de un hogar que le brinde amor", fundacion: "Fundación: Vida animal", tamanio: "Mediano", edad: "18 meses", imagen: "https://s-media-cache-ak0.pinimg.com/736x/0b/e2/9b/0be29b71ba515ec579e44ce702ee36b1.jpg", contacto:3125704567),
-            Mascota(nombre: "Luna", raza: "Bulldog", descripcion: "Luna nacio dentro de la fundación como resultado del embarazo de Milagros, una perrita que se encontraba en situacion de calle y fue acogida", fundacion: "Fundación: Morris", tamanio: "Pequeña", edad: "6 meses", imagen: "https://www.mundoperro.net/wp-content/uploads/Bulldog-485x300.jpg", contacto:3134567890),
-            Mascota(nombre: "Nacho", raza: "Criollo", descripcion: "Nacho lleva tres años en la fundación, se encuentra listo para vivir en un hogar que lo llene de amor", fundacion: "Fundación: Paz animal", tamanio: "Mediano", edad: "4 años", imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/AHey_Fatty.jpg/200px-AHey_Fatty.jpg", contacto:3143354418),
-            Mascota(nombre: "Lucas", raza: "Pitbull", descripcion: "Lucas fue encontrado en estado de desnutricion. Ahora se encuentra recuperado y en busca de un hogar que le brinde amor", fundacion: "Fundación: PATA", tamanio: "Mediano", edad: "2 años", imagen: "https://t2.ea.ltmcdn.com/es/images/8/0/7/img_nombres_para_perros_pitbull_6708_600.jpg", contacto:3017780834),
-        ]
+        
+        api = MascotasApi()
+        api.ListarMascotas{(arrayMascota) in
+            self.data = arrayMascota
+            print(self.data)
+            self.table.reloadData()
+        
+           
+        }
+        
+        
+        
+        
+        
+
     }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -48,7 +67,8 @@ class CatalogoViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return self.data.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
