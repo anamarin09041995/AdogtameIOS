@@ -37,7 +37,6 @@
 		ACB66F910D487DB29B9DD7FB /* Pods_Adogtame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FA7C6F429958253E927CE2 /* Pods_Adogtame.framework */; };
 		BC1D20701EC4FF3000398344 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1D206F1EC4FF3000398344 /* Payment.storyboard */; };
 		BC1D20741EC5013100398344 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1D20731EC5013100398344 /* PaymentViewController.swift */; };
-		BC1D20761EC52A2300398344 /* Money Bag Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1D20751EC52A2300398344 /* Money Bag Filled-50.png */; };
 		BC1D20781EC52E8B00398344 /* Money Bag-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1D20771EC52E8B00398344 /* Money Bag-50.png */; };
 		BC507E441ECCA9360077E217 /* UsuariosApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC507E431ECCA9360077E217 /* UsuariosApi.swift */; };
 		BC507E461ECCB2010077E217 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC507E451ECCB2010077E217 /* User.swift */; };
@@ -51,12 +50,13 @@
 		BC567F1B1EC4085000CF8660 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC567F141EC4085000CF8660 /* MobileCoreServices.framework */; };
 		BC567F1C1EC4085000CF8660 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC567F151EC4085000CF8660 /* SafariServices.framework */; };
 		BC567F1D1EC4085000CF8660 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC567F161EC4085000CF8660 /* SystemConfiguration.framework */; };
-		BC571F2B1ECB9E2C00645E90 /* bagPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = BC571F2A1ECB9E2C00645E90 /* bagPressed.png */; };
+		BC5B8DB21ECE0C9000C68C40 /* Checked.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5B8DB11ECE0C9000C68C40 /* Checked.png */; };
+		BC5B8DB41ECE0CAC00C68C40 /* Unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5B8DB31ECE0CAC00C68C40 /* Unchecked.png */; };
+		BC5B8DB61ECE0CB800C68C40 /* Cat Footprint Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5B8DB51ECE0CB800C68C40 /* Cat Footprint Filled-50.png */; };
+		BC5B8DB81ECE0CC600C68C40 /* bagPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5B8DB71ECE0CC600C68C40 /* bagPressed.png */; };
+		BC5B8DBA1ECE0CD400C68C40 /* Money Bag Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5B8DB91ECE0CD400C68C40 /* Money Bag Filled-50.png */; };
 		BC60F0631EC76E42004040DE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60F0621EC76E42004040DE /* Alamofire.framework */; };
 		BC60F0691EC77C89004040DE /* MascotasApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60F0681EC77C89004040DE /* MascotasApi.swift */; };
-		BC6A85991ECA1F7B00ED99B8 /* Checked.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6A85981ECA1F7B00ED99B8 /* Checked.png */; };
-		BC6A859B1ECA1FB500ED99B8 /* Unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6A859A1ECA1FB500ED99B8 /* Unchecked.png */; };
-		BCE750A91EC6CB5600AA5D91 /* Cat Footprint Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BCE750A81EC6CB5600AA5D91 /* Cat Footprint Filled-50.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,7 +93,6 @@
 		59FA7C6F429958253E927CE2 /* Pods_Adogtame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Adogtame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC1D206F1EC4FF3000398344 /* Payment.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
 		BC1D20731EC5013100398344 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
-		BC1D20751EC52A2300398344 /* Money Bag Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Money Bag Filled-50.png"; sourceTree = "<group>"; };
 		BC1D20771EC52E8B00398344 /* Money Bag-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Money Bag-50.png"; path = "../../../Downloads/Money Bag-50.png"; sourceTree = "<group>"; };
 		BC507E431ECCA9360077E217 /* UsuariosApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuariosApi.swift; sourceTree = "<group>"; };
 		BC507E451ECCB2010077E217 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -109,12 +108,13 @@
 		BC567F151EC4085000CF8660 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		BC567F161EC4085000CF8660 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BC567F1F1EC423CD00CF8660 /* Adogtame-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Adogtame-Bridging-Header.h"; sourceTree = "<group>"; };
-		BC571F2A1ECB9E2C00645E90 /* bagPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bagPressed.png; path = ../../../Downloads/bagPressed.png; sourceTree = "<group>"; };
+		BC5B8DB11ECE0C9000C68C40 /* Checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checked.png; sourceTree = "<group>"; };
+		BC5B8DB31ECE0CAC00C68C40 /* Unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Unchecked.png; sourceTree = "<group>"; };
+		BC5B8DB51ECE0CB800C68C40 /* Cat Footprint Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cat Footprint Filled-50.png"; sourceTree = "<group>"; };
+		BC5B8DB71ECE0CC600C68C40 /* bagPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bagPressed.png; sourceTree = "<group>"; };
+		BC5B8DB91ECE0CD400C68C40 /* Money Bag Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Money Bag Filled-50.png"; sourceTree = "<group>"; };
 		BC60F0621EC76E42004040DE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/Adogtame-bporpgtmzwowwiciwhfeclvuaasn/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		BC60F0681EC77C89004040DE /* MascotasApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MascotasApi.swift; sourceTree = "<group>"; };
-		BC6A85981ECA1F7B00ED99B8 /* Checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Checked.png; path = ../../../Downloads/Checked.png; sourceTree = "<group>"; };
-		BC6A859A1ECA1FB500ED99B8 /* Unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Unchecked.png; path = ../../../Downloads/Unchecked.png; sourceTree = "<group>"; };
-		BCE750A81EC6CB5600AA5D91 /* Cat Footprint Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cat Footprint Filled-50.png"; path = "../../../Downloads/Cat Footprint Filled-50.png"; sourceTree = "<group>"; };
 		EB56D55CF8D8A4DC35423BA3 /* Pods-Adogtame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adogtame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Adogtame/Pods-Adogtame.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,16 +192,16 @@
 			isa = PBXGroup;
 			children = (
 				2D253CBF1EC0EF47007E2C95 /* avatar.png */,
-				BC1D20751EC52A2300398344 /* Money Bag Filled-50.png */,
 				BC1D20771EC52E8B00398344 /* Money Bag-50.png */,
-				BC6A85981ECA1F7B00ED99B8 /* Checked.png */,
 				2D253CC01EC0EF47007E2C95 /* dollar-coins.png */,
-				BC6A859A1ECA1FB500ED99B8 /* Unchecked.png */,
-				BCE750A81EC6CB5600AA5D91 /* Cat Footprint Filled-50.png */,
+				BC5B8DB11ECE0C9000C68C40 /* Checked.png */,
+				BC5B8DB31ECE0CAC00C68C40 /* Unchecked.png */,
 				2D253CC11EC0EF47007E2C95 /* history.png */,
 				2D253CC21EC0EF47007E2C95 /* house-sale-agreement.png */,
+				BC5B8DB71ECE0CC600C68C40 /* bagPressed.png */,
+				BC5B8DB91ECE0CD400C68C40 /* Money Bag Filled-50.png */,
 				2D253CC31EC0EF47007E2C95 /* house.png */,
-				BC571F2A1ECB9E2C00645E90 /* bagPressed.png */,
+				BC5B8DB51ECE0CB800C68C40 /* Cat Footprint Filled-50.png */,
 				2D253CC41EC0EF47007E2C95 /* padlock.png */,
 				2D253CC51EC0EF47007E2C95 /* paw-print-.png */,
 				2D253CC61EC0EF47007E2C95 /* phone-contact.png */,
@@ -331,10 +331,11 @@
 			files = (
 				2D253CCD1EC0EF47007E2C95 /* paw-print-.png in Resources */,
 				BC1D20701EC4FF3000398344 /* Payment.storyboard in Resources */,
-				BCE750A91EC6CB5600AA5D91 /* Cat Footprint Filled-50.png in Resources */,
-				BC6A85991ECA1F7B00ED99B8 /* Checked.png in Resources */,
+				BC5B8DBA1ECE0CD400C68C40 /* Money Bag Filled-50.png in Resources */,
+				BC5B8DB41ECE0CAC00C68C40 /* Unchecked.png in Resources */,
 				2D253CC91EC0EF47007E2C95 /* history.png in Resources */,
 				2D253CC71EC0EF47007E2C95 /* avatar.png in Resources */,
+				BC5B8DB21ECE0C9000C68C40 /* Checked.png in Resources */,
 				2D253CCE1EC0EF47007E2C95 /* phone-contact.png in Resources */,
 				2D253CCB1EC0EF47007E2C95 /* house.png in Resources */,
 				2DA2BCFA1EBA318A0072748F /* Catalogo.storyboard in Resources */,
@@ -344,10 +345,9 @@
 				2DA2BCEF1EBA22A30072748F /* Assets.xcassets in Resources */,
 				2DDE2ED21EBBDCA000E9835A /* DetailCatalogo.storyboard in Resources */,
 				2D253CCA1EC0EF47007E2C95 /* house-sale-agreement.png in Resources */,
-				BC1D20761EC52A2300398344 /* Money Bag Filled-50.png in Resources */,
 				2D253CC81EC0EF47007E2C95 /* dollar-coins.png in Resources */,
-				BC571F2B1ECB9E2C00645E90 /* bagPressed.png in Resources */,
-				BC6A859B1ECA1FB500ED99B8 /* Unchecked.png in Resources */,
+				BC5B8DB81ECE0CC600C68C40 /* bagPressed.png in Resources */,
+				BC5B8DB61ECE0CB800C68C40 /* Cat Footprint Filled-50.png in Resources */,
 				2DA2BCED1EBA22A30072748F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

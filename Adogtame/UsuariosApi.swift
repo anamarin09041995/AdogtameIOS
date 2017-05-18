@@ -39,7 +39,27 @@ class UsuariosApi{
           
         }
         
-        
 }
 
+    
+    
+
+    
+    func Email(callback:@escaping (User) ->Void){
+        
+        let parameters: Parameters=["email": UserDefaults().object(forKey: "email") as Any]
+        
+        Alamofire.request(url+"email", method:.post,   parameters: parameters ).responseJSON{(response) in
+            
+            
+        }
+        
+    }
+
+    
+    
+    
+    
+    
+    
 }
