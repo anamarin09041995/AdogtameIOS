@@ -26,9 +26,13 @@ class DonacionesViewController: UIViewController, UITableViewDataSource {
             self.data = arrayFundaciones
             print(self.data)
             self.table.reloadData()
-            
-            
         }
+        
+        
+        
+        
+        
+        
         
         
 
@@ -69,6 +73,7 @@ class DonacionesViewController: UIViewController, UITableViewDataSource {
         cell.direccion.text = f.direccion
         cell.contacto.text = "\(f.contacto!)"
         cell.img.sd_setImage(with: URL(string:f.imagen))
+        print("SIIIIIII")
         
         return cell
     }

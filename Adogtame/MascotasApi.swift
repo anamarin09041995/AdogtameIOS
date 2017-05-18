@@ -12,9 +12,9 @@ import Alamofire
 class MascotasApi{
     
      var data: [Mascota] = []
+     var segui: [MascotaSeg] = []
      var fundaciones: [Fundaciones] = []
-    var userD: UserDefaults!
-    
+
     
     var json = [NSDictionary]()
     
@@ -92,10 +92,11 @@ class MascotasApi{
     
     
     
-    func ListarSeguimiento(callback:@escaping (Array<Mascota>) ->Void){
-
+    func ListarSeguimiento(callback:@escaping (Array<MascotaSeg>) ->Void){
         
-        Alamofire.request(url+"seguimiento/", method:.get).responseJSON{(response) in
+        let seguimiento: String = UserDefaults().object(forKey: "id") as! String
+        
+        Alamofire.request(url+"seguimiento/"+seguimiento, method:.get).responseJSON{(response) in
             
             self.json = response.result.value as! [NSDictionary]
             
@@ -106,21 +107,16 @@ class MascotasApi{
                 let nombre = mascotasArray["nombre"] as? String
                 let imagen = mascotasArray["imagen"] as? String
                 let descripcion = mascotasArray["descripcion"] as? String
-                let raza = mascotasArray["raza"] as? String
-                let contacto = mascotasArray["contacto"] as? Int64
-                let edad = mascotasArray["edad"] as? String
-                let tamanio = mascotasArray["tamanio"] as? String
-                let fundacion = mascotasArray["fundacion"] as? String
                 
-                let mascota_obj = Mascota(nombre: nombre!, raza: raza!, descripcion:descripcion!, fundacion :fundacion!, tamanio: tamanio! ,edad: edad!, imagen: imagen! ,contacto: contacto!  )
+                let mascota_obj = MascotaSeg(nombre: nombre!, descripcion:descripcion!,  imagen: imagen!   )
                 
                 
-                self.data.append(mascota_obj)
-                
+                self.segui.append(mascota_obj)
+    
             }
             
-            print(self.data[2].fundacion)
-            callback (self.data)
+            print(self.segui[0].nombre)
+            callback (self.segui)
         }
         
         
@@ -129,9 +125,6 @@ class MascotasApi{
 
     
     
-    
-    
-    /*"{\"email\": \""+email+"\"  , \"password\": \""+password+"\"}" */
     
     
     

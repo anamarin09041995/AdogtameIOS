@@ -11,45 +11,32 @@ import Foundation
 import Alamofire
 
 class UsuariosApi{
-    
-    var data: [User] = []
+
     var fundaciones: [Fundaciones] = []
-    
-    
-    var json = [NSDictionary]()
-    
     
     
     let url = "https://test1-adogtame.herokuapp.com/"
     
     
-    func Login(email:String, password:String ,callback:@escaping (Array<User>) ->Void){
+    func Login(email:String, password:String ,callback:@escaping (User) ->Void){
         
-        let parameters = "{\"email\": \""+email+"\"  , \"password\": \""+password+"\"}"
+        let parameters: Parameters=["email": email  , "password": password  ]
             
-        Alamofire.request(url+"users/login", method: .post,   parameters: parameters, encoding: JSONEncoding.default).responseJSON{(response) in
+        Alamofire.request(url+"users/login", method:.post,   parameters: parameters ).responseJSON{(response) in
             
-            self.json = response.result.value as! [NSDictionary]
+            let json = response.result.value as! [String: Any]
+            let user = json["user"] as! [String: Any]
+            let id = user["_id"] as! String
+            let email = user["email"] as! String
+            let city = user["city"] as! String
+            let password = user["password"] as! String
             
-            print(self.json.count)
+            let usuario = User(email: email, password: password, city: city, id: id)
+
+            callback(usuario)
             
-            for i in 0 ..< self.json.count{
-                let userArray = self.json[i]
-                
-                let email = userArray["email"] as? String
-                let password = userArray["password"] as? String
-                let id = userArray["_id"] as? String
-                let city = userArray["city"] as? String
-                
-                let user = User(email :email!, password: password!, city :city!, id: id! )
-                
-                
-                self.data.append(user)
-                
-            }
             
-            print(self.data[0].id)
-            callback (self.data)
+          
         }
         
         

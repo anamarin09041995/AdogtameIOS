@@ -259,6 +259,7 @@
         <!--Seguimiento-->
         <scene sceneID="leC-al-Edn">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uZM-pd-3yi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="OQM-Zc-sES" customClass="SeguimientoViewController" customModule="Adogtame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gzc-yc-EIB"/>
@@ -276,7 +277,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="173"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dgg-mm-eCl" id="JhD-cW-thx">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="173"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="172.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8W4-cz-Ujb">
@@ -301,10 +302,17 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="3tv-y8-CwC" firstAttribute="bottom" secondItem="8W4-cz-Ujb" secondAttribute="bottom" id="0Ce-JH-hzv"/>
+                                                <constraint firstItem="Fx2-4r-AOI" firstAttribute="top" secondItem="JhD-cW-thx" secondAttribute="topMargin" id="0Zl-E4-5aP"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="3tv-y8-CwC" secondAttribute="trailing" constant="15" id="AUV-k0-k1B"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="8W4-cz-Ujb" secondAttribute="trailing" constant="213" id="F88-VC-Xfx"/>
+                                                <constraint firstItem="Fx2-4r-AOI" firstAttribute="leading" secondItem="8W4-cz-Ujb" secondAttribute="trailing" constant="8" id="Itb-ve-p9q"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="3tv-y8-CwC" secondAttribute="bottom" constant="6.5" id="Jcr-1X-5xy"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3tv-y8-CwC" secondAttribute="trailing" constant="15" id="Jho-dd-zkt"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Fx2-4r-AOI" secondAttribute="trailing" constant="15" id="OR9-tK-5ol"/>
                                                 <constraint firstItem="3tv-y8-CwC" firstAttribute="leading" secondItem="8W4-cz-Ujb" secondAttribute="trailing" constant="8" id="X25-fM-oCt"/>
                                                 <constraint firstItem="Fx2-4r-AOI" firstAttribute="trailing" secondItem="JhD-cW-thx" secondAttribute="trailingMargin" constant="-15" id="fmS-8c-i5V"/>
+                                                <constraint firstItem="3tv-y8-CwC" firstAttribute="leading" secondItem="8W4-cz-Ujb" secondAttribute="trailing" constant="8" id="hrK-h1-JrE"/>
+                                                <constraint firstItem="3tv-y8-CwC" firstAttribute="top" secondItem="Fx2-4r-AOI" secondAttribute="bottom" constant="18" id="lhr-Zw-dEA"/>
                                                 <constraint firstItem="Fx2-4r-AOI" firstAttribute="top" secondItem="8W4-cz-Ujb" secondAttribute="top" id="nvf-ar-HIL"/>
                                                 <constraint firstItem="3tv-y8-CwC" firstAttribute="top" secondItem="Fx2-4r-AOI" secondAttribute="bottom" constant="18" id="oCd-FN-Liw"/>
                                                 <constraint firstItem="Fx2-4r-AOI" firstAttribute="leading" secondItem="JhD-cW-thx" secondAttribute="leadingMargin" constant="154" id="oDG-JL-atw"/>
@@ -335,8 +343,10 @@
                     <navigationItem key="navigationItem" title="Seguimiento" id="0qt-Lh-jRp">
                         <barButtonItem key="backBarButtonItem" title="Atrás" id="0rw-qK-s7Y"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="ifg-wC-BBg" id="pXW-wK-Kcd"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uZM-pd-3yi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1692" y="622.03898050974522"/>
         </scene>

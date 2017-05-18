@@ -41,6 +41,7 @@
 		BC1D20781EC52E8B00398344 /* Money Bag-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1D20771EC52E8B00398344 /* Money Bag-50.png */; };
 		BC507E441ECCA9360077E217 /* UsuariosApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC507E431ECCA9360077E217 /* UsuariosApi.swift */; };
 		BC507E461ECCB2010077E217 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC507E451ECCB2010077E217 /* User.swift */; };
+		BC507E481ECD4F6C0077E217 /* MascotaSeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC507E471ECD4F6C0077E217 /* MascotaSeg.swift */; };
 		BC567F0D1EC407EF00CF8660 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC567F0A1EC407EF00CF8660 /* Accelerate.framework */; };
 		BC567F0E1EC407EF00CF8660 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC567F0B1EC407EF00CF8660 /* AudioToolbox.framework */; };
 		BC567F171EC4085000CF8660 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC567F101EC4085000CF8660 /* AVFoundation.framework */; };
@@ -96,6 +97,7 @@
 		BC1D20771EC52E8B00398344 /* Money Bag-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Money Bag-50.png"; path = "../../../Downloads/Money Bag-50.png"; sourceTree = "<group>"; };
 		BC507E431ECCA9360077E217 /* UsuariosApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuariosApi.swift; sourceTree = "<group>"; };
 		BC507E451ECCB2010077E217 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BC507E471ECD4F6C0077E217 /* MascotaSeg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MascotaSeg.swift; sourceTree = "<group>"; };
 		BC567F0A1EC407EF00CF8660 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		BC567F0B1EC407EF00CF8660 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BC567F0C1EC407EF00CF8660 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
@@ -213,6 +215,7 @@
 				2DBC3B4B1EBB5F3E007AD6FE /* Mascota.swift */,
 				2DFF7F641EBB92D200E41236 /* Fundaciones.swift */,
 				BC507E451ECCB2010077E217 /* User.swift */,
+				BC507E471ECD4F6C0077E217 /* MascotaSeg.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				2DA2BCE81EBA22A30072748F /* AppDelegate.swift in Sources */,
 				2D9112961EBB7EED00745AA6 /* DonacionesCell.swift in Sources */,
 				2DDE2ED41EBBE16800E9835A /* DetailCatalogoViewController.swift in Sources */,
+				BC507E481ECD4F6C0077E217 /* MascotaSeg.swift in Sources */,
 				BC507E461ECCB2010077E217 /* User.swift in Sources */,
 				BC507E441ECCA9360077E217 /* UsuariosApi.swift in Sources */,
 				2DBC3B4C1EBB5F3E007AD6FE /* Mascota.swift in Sources */,

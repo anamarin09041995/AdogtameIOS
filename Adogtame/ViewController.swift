@@ -32,37 +32,35 @@ class ViewController: UIViewController {
     
     @IBAction func login(_ sender: Any) {
         
-        let url = ""
-        let parameters: Parameters=[
-            "username" : user.text!,
-            "password" : pass.text!
-        ]
-        
-        Alamofire.request(url, method:.post, parameters: parameters, encoding: JSONEncoding.default).responseJSON {(reponse) in
-        
-        }
-        
+
         let passw = pass.text!
         let email = user.text!
 
         
         api1 = UsuariosApi()
-        api1.Login(email: email , password: passw){(arrayUsuarios) in
-            print(arrayUsuarios)
+        api1.Login(email: email , password: passw){(Usuario) in
+            print(Usuario)
             
+            if(email ==  Usuario.email && passw == Usuario.password){
+                UserDefaults().set(email, forKey: "email")
+                UserDefaults().set(passw, forKey: "passw")
+                UserDefaults().set(Usuario.id, forKey: "id")
+               print(self.userD.string(forKey: "id") as Any)
+                UserDefaults().set(true, forKey: "logged")
+                print(self.userD.string(forKey: "email")!)
+                
+                self.performSegue(withIdentifier: "login", sender: nil)
+            }
+            else {
+            print("No esta el usuario")
+            }
+    
         }
     
         
         
         
-        if(email ==  "anamarin@unicauca.edu.co" && passw == "123456"){
-            userD.set(email, forKey: "email")
-            userD.set(passw, forKey: "passw")
-            userD.set(true, forKey: "logged")
-            print(userD.string(forKey: "email")!)
-            
-            performSegue(withIdentifier: "login", sender: nil)
-        }
+       
     }
 
     override func didReceiveMemoryWarning() {
