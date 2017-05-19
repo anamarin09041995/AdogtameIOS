@@ -22,8 +22,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zs8-k4-yRi">
-                                <rect key="frame" x="20" y="36" width="332" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zs8-k4-yRi">
+                                <rect key="frame" x="16" y="36" width="343" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="OrW-ph-eps"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -159,6 +162,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2d1-6T-jgo">
                                 <rect key="frame" x="174" y="582" width="104" height="50"/>
                                 <state key="normal" title="Button" image="Cat Footprint Filled-50.png"/>
+                                <connections>
+                                    <action selector="Pagar:" destination="SV2-1e-fuN" eventType="touchUpInside" id="YDl-Wx-EkR"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="ii1-Cu-Her">
                                 <rect key="frame" x="16" y="519" width="35" height="68"/>
@@ -215,7 +221,7 @@
                             <constraint firstItem="Ce7-9g-aLK" firstAttribute="leading" secondItem="nKF-PQ-IKY" secondAttribute="leading" id="slX-kL-ucV"/>
                             <constraint firstItem="OOa-JF-lTG" firstAttribute="top" secondItem="UOG-d4-h4V" secondAttribute="bottom" constant="35.5" id="v1r-WZ-uGJ"/>
                             <constraint firstItem="OOa-JF-lTG" firstAttribute="leading" secondItem="wIM-wr-3pR" secondAttribute="leadingMargin" constant="4" id="vZK-H7-h3t"/>
-                            <constraint firstItem="Ce7-9g-aLK" firstAttribute="leading" secondItem="Zs8-k4-yRi" secondAttribute="leading" id="vrG-Gp-zb9"/>
+                            <constraint firstItem="Ce7-9g-aLK" firstAttribute="leading" secondItem="Zs8-k4-yRi" secondAttribute="leading" constant="4" id="vrG-Gp-zb9"/>
                             <constraint firstItem="ZtM-vd-VIX" firstAttribute="leading" secondItem="wIM-wr-3pR" secondAttribute="leadingMargin" constant="36" id="zZt-4W-2Vi"/>
                         </constraints>
                     </view>

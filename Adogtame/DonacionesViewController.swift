@@ -68,7 +68,6 @@ class DonacionesViewController: UIViewController, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "donacionesCelda") as! DonacionesCell
         let f = data[indexPath.row]
-        
         cell.nombre.text = f.nombre
         cell.direccion.text = f.direccion
         cell.contacto.text = "\(f.contacto!)"

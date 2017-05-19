@@ -11,6 +11,7 @@ import SDWebImage
 
 class RegistroViewController: UIViewController {
 
+    var api1:UsuariosApi!
     
     @IBOutlet weak var email: UITextField!
     
@@ -18,20 +19,48 @@ class RegistroViewController: UIViewController {
     
     @IBOutlet weak var city: UITextField!
     
+    
+    
     //Se crean variables para guardar datos del registro
     var info: String!
     
-    @IBAction func registro(_ sender: Any) {
-        let password = email.text!
-        let username = pass.text!
-        let ciudad = city.text!
+       @IBAction func registro(_ sender: Any) {
         
-        if(username != "" && password != "" && ciudad != ""){
-            performSegue(withIdentifier: "catalogo", sender: nil)
+        let email = self.email.text!
+        let password = pass.text!
+        let city = self.city.text!
+        
+        
+        api1 = UsuariosApi()
+        api1.Verificar(email: email , password: password){(val) in
+            if val {
+            
+            self.api1.regis(email: email, password: password, city: city)
+            print("USUARIO REGISTRADO")
+            }
+           
+            else {
+            
+            print("USUARIO YA REGISTRADO ")
+            }
+            
+                
+                
+                
+                
+                
+                
+            
         }
-
         
     }
+        
+        
+    
+        
+      
+        
+
     override func viewDidLoad() {
         super.viewDidLoad()
         email.text = info

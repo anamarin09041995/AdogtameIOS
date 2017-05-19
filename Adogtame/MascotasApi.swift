@@ -115,7 +115,7 @@ class MascotasApi{
     
             }
             
-            print(self.segui[0].nombre)
+  
             callback (self.segui)
         }
         
@@ -123,7 +123,26 @@ class MascotasApi{
     }
     
 
+
     
+    
+    
+    func AddApadrinados(nombre: String, imagen: String, descripcion: String){
+        
+        let email = UserDefaults().object(forKey: "email") as! String
+        let id = UserDefaults().object(forKey: "id") as! String
+
+        let usuario = ["id": id , "email":email]
+    
+        let parameters: Parameters=["nombre":nombre,"imagen":imagen,"descripcion":descripcion, "usuario":usuario]
+    
+        Alamofire.request(url+"seguimiento", method: .post,   parameters: parameters , encoding: JSONEncoding.default ).responseJSON{(response) in
+    
+            
+        }
+        
+    }
+
     
     
     

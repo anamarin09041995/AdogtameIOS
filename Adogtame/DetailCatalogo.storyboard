@@ -87,6 +87,9 @@
                                         <state key="normal" title="Adoptar">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="Adoptar:" destination="96z-NI-pBY" eventType="touchUpInside" id="OTt-cr-1FM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -105,6 +108,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="Apadrinar:" destination="96z-NI-pBY" eventType="touchUpInside" id="Owd-Gf-RfA"/>
                                             <segue destination="opx-8U-TGX" kind="show" id="8FP-IJ-pzU"/>
                                         </connections>
                                     </button>

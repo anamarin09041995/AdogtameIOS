@@ -26,9 +26,18 @@ class DetailCatalogoViewController: UIViewController {
     
     @IBOutlet weak var fundacion: UILabel!
     
+    var api:UsuariosApi!
+    
+    var data: [MascotaSeg] = []
+    var api1: MascotasApi!
+    var val: Bool = false
+    
+
+
+    
     
     /*@IBAction func adoptar(_ sender: Any) {
-        //let mascota = data[indexPath.row]
+        let mascota = data[indexPath.row]
         
         let appearance = SCLAlertView.SCLAppearance(
             kTitleFont: UIFont(name: "HelveticaNeue", size: 20)!,
@@ -51,8 +60,74 @@ class DetailCatalogoViewController: UIViewController {
     }
     */
     
-   
     
+    
+    @IBAction func Adoptar(_ sender: Any) {
+         api = UsuariosApi()
+           api.Email()
+    }
+    
+    
+    
+    
+   
+
+    
+    
+    @IBAction func Apadrinar(_ sender: Any) {
+        
+       
+        
+        api1 = MascotasApi()
+        api1.ListarSeguimiento{(arraymascotas) in
+            
+            for i in 0 ..< arraymascotas.count {
+            
+                if arraymascotas[i].nombre == self.mascota.nombre {
+                    print("ya esta apadrinado")
+                    self.val = true
+                    
+                }
+
+            }
+            
+            
+            if !self.val {
+
+                print("HOLAAA")
+                self.api1.AddApadrinados(nombre: self.mascota.nombre,imagen: self.mascota.imagen, descripcion: self.mascota.descripcion)
+                
+              
+            }
+            
+        }
+        
+        
+       
+
+
+        
+        let appearance = SCLAlertView.SCLAppearance(
+            kTitleFont: UIFont(name: "HelveticaNeue", size: 20)!,
+            kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
+            kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
+            showCloseButton: false
+        )
+        
+        let alertView = SCLAlertView(appearance: appearance)
+        
+        alertView.addButton("Cancelar"){
+            print("Cancelar")
+        }
+        alertView.addButton("Ok") {
+            print("Ok")
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+        alertView.showTitle("Gracias por adoptar a \(mascota.nombre!)", subTitle: "Gracias por adoptar! Se envió a tu correo un formulario de adopción", style: .notice, colorStyle: 0x08AE9E, colorTextButton: 0xFFFFFF)
+        
+        
+    }
     
     
     override func viewDidLoad() {

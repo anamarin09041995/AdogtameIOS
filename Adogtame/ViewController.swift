@@ -38,25 +38,47 @@ class ViewController: UIViewController {
 
         
         api1 = UsuariosApi()
-        api1.Login(email: email , password: passw){(Usuario) in
-            print(Usuario)
+        
+        
+        api1.Verificar(email: email , password: passw){(val) in
+        
+        
+            if !val {
             
-            if(email ==  Usuario.email && passw == Usuario.password){
-                UserDefaults().set(email, forKey: "email")
-                UserDefaults().set(passw, forKey: "passw")
-                UserDefaults().set(Usuario.id, forKey: "id")
-               print(self.userD.string(forKey: "id") as Any)
-                UserDefaults().set(true, forKey: "logged")
-                print(self.userD.string(forKey: "email")!)
-                
-                self.performSegue(withIdentifier: "login", sender: nil)
-            }
+                self.api1.Login(email: email , password: passw){(Usuario) in
+                    print(Usuario)
+                    
+                    if(email ==  Usuario.email && passw == Usuario.password){
+                        UserDefaults().set(email, forKey: "email")
+                        UserDefaults().set(passw, forKey: "passw")
+                        UserDefaults().set(Usuario.id, forKey: "id")
+                        print(self.userD.string(forKey: "id") as Any)
+                        UserDefaults().set(true, forKey: "logged")
+                        UserDefaults().set(Usuario.city, forKey: "city")
+                        
+                        print(self.userD.string(forKey: "email")!)
+                        
+                        self.performSegue(withIdentifier: "login", sender: nil)
+                    }
+                    else {
+                        print("No esta el usuario")
+                    }
+                    
+                }
+
+            
+            } // CIERRA IF 
+        
+            
+            
             else {
-            print("No esta el usuario")
+            
+            print("EL USUARIO NO ESTA REGISTRADO")
             }
-    
+        
         }
-    
+        
+        
         
         
         

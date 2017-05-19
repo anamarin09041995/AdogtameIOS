@@ -43,14 +43,42 @@ class UsuariosApi{
 
     
     
+    
+    
+    func Verificar(email:String, password:String ,callback:@escaping (Bool) ->Void){
+        var val:Bool = false
+        let parameters: Parameters=["email": email  , "password": password  ]
+        
+        Alamofire.request(url+"users/login", method:.post,   parameters: parameters ).responseJSON{(response) in
+            
+            let json = response.result.value as! [String: Any]
+            if json["user"] == nil {
+            val = true
+            }
+            else {
+            val = false
+            }
+            
+            callback(val)
+            
+            
+            
+        }
+        
+    }
+    
+    
+    
 
     
-    func Email(callback:@escaping (User) ->Void){
+    func Email(){
         
-        let parameters: Parameters=["email": UserDefaults().object(forKey: "email") as Any]
+        let email = UserDefaults().object(forKey: "email") as! String
+        let parameters: Parameters=["email": email]
         
         Alamofire.request(url+"email", method:.post,   parameters: parameters ).responseJSON{(response) in
             
+            print("enviado")
             
         }
         
@@ -58,6 +86,24 @@ class UsuariosApi{
 
     
     
+    
+    
+    
+    
+    func regis(email:String, password:String, city:String){
+        
+        let parameters: Parameters=["email": email  , "password": password, "city":city ]
+        
+        Alamofire.request(url+"users/signin", method:.post,   parameters: parameters ).responseJSON{(response) in
+            
+            
+            
+            
+            
+        }
+        
+    }
+
     
     
     

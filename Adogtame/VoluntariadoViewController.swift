@@ -13,13 +13,24 @@ import SDWebImage
 class VoluntariadoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     var data: [Fundaciones] = []
+    var api:MascotasApi!
+
+    
+    @IBOutlet weak var table: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        data = [
-            Fundaciones(nombre: "Fundación: Vida animal", direccion: "Cra 9 No. 67N-55",  descripcion: "Se requieren personas dispuestas a ayudar en el baño de los perros", horario: "Lunes a sábado de 8 am - 4 pm", imagen: "https://sites.google.com/site/fundacionvidaanimalpopayan/_/rsrc/1316780706284/config/customLogo.gif?revision=5", contacto: 3125704567 )
-        ]
+        
+        api = MascotasApi()
+        api.ListarFundaciones{(arrayFundaciones) in
+            self.data = arrayFundaciones
+            print(self.data)
+            self.table.reloadData()
+        }
 
+        
+        
         // Do any additional setup after loading the view.
     }
 
