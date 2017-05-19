@@ -10,6 +10,7 @@ target 'Adogtame' do
    pod 'KDCircularProgress'
    pod 'PayPal-iOS-SDK'
    pod ‘DLRadioButton’
+   pod 'SQLite.swift'
   # Pods for Adogtame
 
 end

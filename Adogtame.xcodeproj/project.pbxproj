@@ -57,6 +57,7 @@
 		BC5B8DBA1ECE0CD400C68C40 /* Money Bag Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5B8DB91ECE0CD400C68C40 /* Money Bag Filled-50.png */; };
 		BC60F0631EC76E42004040DE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60F0621EC76E42004040DE /* Alamofire.framework */; };
 		BC60F0691EC77C89004040DE /* MascotasApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC60F0681EC77C89004040DE /* MascotasApi.swift */; };
+		BC8315451ECF4DDD002C9D8D /* AdogtameDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8315441ECF4DDD002C9D8D /* AdogtameDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,7 @@
 		BC5B8DB91ECE0CD400C68C40 /* Money Bag Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Money Bag Filled-50.png"; sourceTree = "<group>"; };
 		BC60F0621EC76E42004040DE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/Adogtame-bporpgtmzwowwiciwhfeclvuaasn/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		BC60F0681EC77C89004040DE /* MascotasApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MascotasApi.swift; sourceTree = "<group>"; };
+		BC8315441ECF4DDD002C9D8D /* AdogtameDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdogtameDAO.swift; sourceTree = "<group>"; };
 		EB56D55CF8D8A4DC35423BA3 /* Pods-Adogtame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adogtame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Adogtame/Pods-Adogtame.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 		2DA2BCE61EBA22A30072748F /* Adogtame */ = {
 			isa = PBXGroup;
 			children = (
+				BC8315431ECF4DB6002C9D8D /* database */,
 				2DE6DCF41EBD2C5700E718F6 /* Net */,
 				2DBC3B4D1EBB64FD007AD6FE /* Cells */,
 				2DBC3B4A1EBB5F20007AD6FE /* Models */,
@@ -264,6 +267,14 @@
 				308CF98E0346024F71033156 /* Pods-Adogtame.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC8315431ECF4DB6002C9D8D /* database */ = {
+			isa = PBXGroup;
+			children = (
+				BC8315441ECF4DDD002C9D8D /* AdogtameDAO.swift */,
+			);
+			name = database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +428,7 @@
 				2DE6DCF81EBD2DD000E718F6 /* SeguimientoViewController.swift in Sources */,
 				BC1D20741EC5013100398344 /* PaymentViewController.swift in Sources */,
 				2DE6DCF61EBD2D9600E718F6 /* SeguimientoCell.swift in Sources */,
+				BC8315451ECF4DDD002C9D8D /* AdogtameDAO.swift in Sources */,
 				2DBC3B4F1EBB652D007AD6FE /* CatalogoCell.swift in Sources */,
 				2DA2BCE81EBA22A30072748F /* AppDelegate.swift in Sources */,
 				2D9112961EBB7EED00745AA6 /* DonacionesCell.swift in Sources */,

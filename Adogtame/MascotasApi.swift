@@ -17,7 +17,8 @@ class MascotasApi{
 
     
     var json = [NSDictionary]()
-    
+    var dao: AdogtameDao!
+   
     
     
     let url = "https://test1-adogtame.herokuapp.com/"
@@ -25,7 +26,11 @@ class MascotasApi{
     
     func ListarMascotas(callback:@escaping (Array<Mascota>) ->Void){
         Alamofire.request(url+"mascotas", method:.get).responseJSON{(response) in
+    
+            switch response.result {
             
+                case .success:
+                
             self.json = response.result.value as! [NSDictionary]
             
             print(self.json.count)
@@ -50,6 +55,14 @@ class MascotasApi{
             
             print(self.data[2].fundacion)
             callback (self.data)
+                
+              
+             case .failure:
+                
+                callback(self.data)
+                
+            }
+            
         }
 
         
@@ -59,6 +72,9 @@ class MascotasApi{
     
     func ListarFundaciones(callback:@escaping (Array<Fundaciones>) ->Void){
         Alamofire.request(url+"fundaciones", method:.get).responseJSON{(response) in
+            
+            switch response.result {
+                case .success:
             
             self.json = response.result.value as! [NSDictionary]
             
@@ -77,28 +93,47 @@ class MascotasApi{
                 let fundacion_obj = Fundaciones(nombre: nombre!, direccion: direccion!, descripcion: descripcion!, horario: horario!, imagen: imagen!, contacto: contacto!)
                 
                 
+                
                 self.fundaciones.append(fundacion_obj)
                 
             }
             
 
-            callback (self.fundaciones)
-        }
+                callback (self.fundaciones)
+                
+                
+                case .failure:
+                
+                print("error al cargar")
+                callback(self.fundaciones)
+        
+            }
+            
+            
+            
+            }
         
         
     }
     
-    
-    
+   
     
     
     func ListarSeguimiento(callback:@escaping (Array<MascotaSeg>) ->Void){
-        
+   
+        dao = AdogtameDao()
         let seguimiento: String = UserDefaults().object(forKey: "id") as! String
+        
+    
         
         Alamofire.request(url+"seguimiento/"+seguimiento, method:.get).responseJSON{(response) in
             
-            self.json = response.result.value as! [NSDictionary]
+            switch response.result {
+            
+                case .success:
+            
+           self.json =  response.result.value as! [NSDictionary]
+            
             
             print(self.json.count)
             
@@ -108,19 +143,45 @@ class MascotasApi{
                 let imagen = mascotasArray["imagen"] as? String
                 let descripcion = mascotasArray["descripcion"] as? String
                 
-                let mascota_obj = MascotaSeg(nombre: nombre!, descripcion:descripcion!,  imagen: imagen!   )
+                let mascota_obj = MascotaSeg(nombre: nombre!, descripcion:descripcion!,  imagen: imagen! , idusuario: UserDefaults().object(forKey: "id") as! String )
+                 let idusu = UserDefaults().object(forKey: "id") as! String
                 
+                for k in 0 ..< self.dao.getByid(idusuario: idusu )!.count{
+                
+                    if self.dao.getByid(idusuario: idusu)![k].nombre != nombre && self.dao.getByid(idusuario: idusu)![k].idusuario != idusu{
+                        print("inserto sqlite")
+                        self.dao.insertar(mascota: mascota_obj)
+                    }
+                }
+                
+                if self.dao.getByid(idusuario: idusu)!.count == 0 {
+                    print("inserto en sqlite")
+                    print(mascota_obj.nombre)
+                    self.dao.insertar(mascota: mascota_obj)
+                }
+
+    
                 
                 self.segui.append(mascota_obj)
     
             }
             
-  
+            
             callback (self.segui)
-        }
+                
+                
+                case .failure:
+                    let idusu = UserDefaults().object(forKey: "id") as! String
+                    print("sqlite")
+                    print(self.dao.getByid(idusuario: idusu)!.count)
+                    self.segui = self.dao.getByid(idusuario: idusu)!
+                callback(self.segui)
         
+            }
+            
+            }
         
-    }
+           }
     
 
 

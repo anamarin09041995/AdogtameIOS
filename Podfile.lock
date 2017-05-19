@@ -38,6 +38,9 @@ PODS:
   - SDWebImage/WebP (4.0.0):
     - libwebp
     - SDWebImage/Core
+  - SQLite.swift (0.11.3):
+    - SQLite.swift/standard (= 0.11.3)
+  - SQLite.swift/standard (0.11.3)
 
 DEPENDENCIES:
   - Alamofire
@@ -46,6 +49,7 @@ DEPENDENCIES:
   - PayPal-iOS-SDK
   - SCLAlertView
   - SDWebImage/WebP
+  - SQLite.swift
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -56,7 +60,8 @@ SPEC CHECKSUMS:
   PayPal-iOS-SDK: db237a752c0b388b93a0b9915b30e26878732bdb
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SQLite.swift: 99b36c22084427f0abbeb957556ce1528cf10bb3
 
-PODFILE CHECKSUM: a15aecee6f759280106f75c75e034d620c38c794
+PODFILE CHECKSUM: ccb6f44938cee5fbe17a0869d02cde565c1e9398
 
 COCOAPODS: 1.2.1

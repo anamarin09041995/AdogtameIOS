@@ -14,14 +14,17 @@ class MascotaSeg{
     var nombre: String!
     var descripcion: String!
     var imagen: String!
+    var idusuario: String!
     
-    init(nombre: String, descripcion: String, imagen: String) {
+    init(nombre: String, descripcion: String, imagen: String, idusuario:String) {
         
         self.nombre = nombre
         
         self.descripcion = descripcion
        
         self.imagen = imagen
+        
+        self.idusuario = idusuario
         
     }
 }

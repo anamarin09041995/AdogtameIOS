@@ -14,16 +14,25 @@ class SeguimientoViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var table: UITableView!
     var data: [MascotaSeg] = []
     var api: MascotasApi!
+    var dao:  AdogtameDao!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         api = MascotasApi()
+       dao = AdogtameDao()
         api.ListarSeguimiento{(seguimientos) in
+            if seguimientos.count == 0 {
+            self.data = self.dao.getByid(idusuario: UserDefaults().object(forKey: "id") as! String)!
+                self.table.reloadData()
+                print(seguimientos)
+            }
+            else {
             self.data = seguimientos
             self.table.reloadData()
             print(seguimientos)
+            }
         
         }
         

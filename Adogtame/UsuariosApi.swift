@@ -24,6 +24,9 @@ class UsuariosApi{
             
         Alamofire.request(url+"users/login", method:.post,   parameters: parameters ).responseJSON{(response) in
             
+            switch response.result {
+            
+            case .success:
             let json = response.result.value as! [String: Any]
             let user = json["user"] as! [String: Any]
             let id = user["_id"] as! String
@@ -35,7 +38,12 @@ class UsuariosApi{
 
             callback(usuario)
             
-            
+            case .failure:
+                let usuario = User(email: "", password: "", city: "", id: "")
+                print("Error")
+                callback(usuario)
+                
+            }
           
         }
         
@@ -50,22 +58,38 @@ class UsuariosApi{
         let parameters: Parameters=["email": email  , "password": password  ]
         
         Alamofire.request(url+"users/login", method:.post,   parameters: parameters ).responseJSON{(response) in
+            let h = response.result.value
+            print("valor de verificar")
+            print(h)
+
+            switch response.result {
             
-            let json = response.result.value as! [String: Any]
-            if json["user"] == nil {
-            val = true
-            }
-            else {
-            val = false
+            case .success:
+                print("success")
+                
+                let json = response.result.value as! [String: Any]
+                if json["user"] == nil {
+                    val = true
+                }
+                else {
+                    val = false
+                }
+                
+            case .failure:
+                
+                print("error")
+                val = false
+                
+            
             }
             
             callback(val)
             
-            
+            }
+        
             
         }
-        
-    }
+    
     
     
     
