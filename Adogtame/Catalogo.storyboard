@@ -53,7 +53,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="173"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d1H-44-SL8" id="e0D-p5-Rjg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="172.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="173"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3D9-gZ-Qgn">
@@ -359,7 +359,7 @@
         <!--Catálogo-->
         <scene sceneID="447-c6-Yg6">
             <objects>
-                <viewController id="8OX-Rf-w0L" customClass="CatalogoViewController" customModule="Adogtame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="catalogo" id="8OX-Rf-w0L" customClass="CatalogoViewController" customModule="Adogtame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g0g-jr-Usx"/>
                         <viewControllerLayoutGuide type="bottom" id="f5E-bx-O8s"/>

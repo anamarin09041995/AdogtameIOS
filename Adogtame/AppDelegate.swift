@@ -16,8 +16,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         PayPalMobile.initializeWithClientIds(forEnvironments: [PayPalEnvironmentProduction: "Afi-i4v7uGpSmlvMQpF6NP-2jVDkpufB5c7QkfgyJRvl18J2BnEU33leiFT9koi2fHUNetvH3o6ZpFi3",
+        
                                                                PayPalEnvironmentSandbox: "gmcruz@gmail.com"])
-
+     
+        let window = self.window
+        
+        let storyboard = UIStoryboard(name: "Main" , bundle: nil)
+        let storyboard1 = UIStoryboard(name: "Catalogo" , bundle: nil)
+        let rootcontroller = storyboard1.instantiateViewController(withIdentifier: "navCatalogo")
+        
+        
+        let rootcontroller1 = storyboard.instantiateViewController(withIdentifier: "Login")
+        
+        
+        var bool: Bool = false
+        UserDefaults().set(false, forKey: "logged")
+          bool = UserDefaults().object(forKey: "logged") as! Bool
+      
+    
+        if bool {
+        window!.rootViewController = rootcontroller
+        }
+        
+        else {
+        window!.rootViewController = rootcontroller1
+            
+        }
+        
+        
+        
+        
+        
             return true
     }
 

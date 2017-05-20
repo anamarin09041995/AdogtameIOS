@@ -126,7 +126,7 @@ class MascotasApi{
         
     
         
-        Alamofire.request(url+"seguimiento/"+seguimiento, method:.get).responseJSON{(response) in
+        Alamofire.request(url+"seguimiento/"+seguimiento, method:.get ).responseJSON{(response) in
             
             switch response.result {
             

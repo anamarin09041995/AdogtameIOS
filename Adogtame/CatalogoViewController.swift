@@ -12,6 +12,7 @@ import SDWebImage
 
 
 class CatalogoViewController: UIViewController, UITableViewDataSource {
+     var indicador:UIActivityIndicatorView = UIActivityIndicatorView()
     
     var data1 = [NSMutableDictionary]()
     
@@ -24,21 +25,20 @@ class CatalogoViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        indicador.center = self.view.center
+        indicador.hidesWhenStopped = true
+        indicador.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(indicador)
+        indicador.startAnimating()
         api = MascotasApi()
         api.ListarMascotas{(arrayMascota) in
             self.data = arrayMascota
             print(self.data)
             self.table.reloadData()
+            self.indicador.stopAnimating()
         
-           
         }
-        
-        
-        
-        
-        
-
+  
     }
     
     

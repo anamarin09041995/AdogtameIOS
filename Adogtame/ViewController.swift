@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 
 class ViewController: UIViewController {
+    
+    var indicador:UIActivityIndicatorView = UIActivityIndicatorView()
 
     @IBOutlet weak var user: UITextField!
     
@@ -32,6 +34,12 @@ class ViewController: UIViewController {
     
     @IBAction func login(_ sender: Any) {
         
+        
+        indicador.center = self.view.center
+        indicador.hidesWhenStopped = true
+        indicador.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(indicador)
+        indicador.startAnimating()
 
         let passw = pass.text!
         let email = user.text!
@@ -40,14 +48,14 @@ class ViewController: UIViewController {
         api1 = UsuariosApi()
         
         
-        api1.Verificar(email: email , password: passw){(val) in
+        api1.Verificar(email: email ){(val) in
         
-        
+
             if !val {
             
                 self.api1.Login(email: email , password: passw){(Usuario) in
                     print(Usuario)
-                    
+                    self.navigationController?.dismiss(animated: true, completion: nil)
                     if(email ==  Usuario.email && passw == Usuario.password){
                         UserDefaults().set(email, forKey: "email")
                         UserDefaults().set(passw, forKey: "passw")
@@ -60,9 +68,7 @@ class ViewController: UIViewController {
                         
                         self.performSegue(withIdentifier: "login", sender: nil)
                     }
-                    else {
-                        print("No esta el usuario")
-                    }
+                   
                     
                 }
 
@@ -74,16 +80,20 @@ class ViewController: UIViewController {
             else {
             
             print("EL USUARIO NO ESTA REGISTRADO")
+                //AQUIIIII VA ALERTAAAAAAAA
+                
             }
-        
+        self.indicador.stopAnimating()
         }
+   
         
-        
-        
-        
-        
-       
     }
+    
+    
+    
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

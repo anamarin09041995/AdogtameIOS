@@ -27,17 +27,18 @@ class UsuariosApi{
             switch response.result {
             
             case .success:
+                do{
             let json = response.result.value as! [String: Any]
-            let user = json["user"] as! [String: Any]
+             let user = try json["user"] as! [String: Any]
             let id = user["_id"] as! String
             let email = user["email"] as! String
             let city = user["city"] as! String
             let password = user["password"] as! String
             
             let usuario = User(email: email, password: password, city: city, id: id)
-
+               
             callback(usuario)
-            
+                } catch{ print("catchhh ")}
             case .failure:
                 let usuario = User(email: "", password: "", city: "", id: "")
                 print("Error")
@@ -53,15 +54,14 @@ class UsuariosApi{
     
     
     
-    func Verificar(email:String, password:String ,callback:@escaping (Bool) ->Void){
+    func Verificar(email:String,callback:@escaping (Bool) ->Void){
         var val:Bool = false
-        let parameters: Parameters=["email": email  , "password": password  ]
+        let parameters: Parameters=["email": email   ]
         
         Alamofire.request(url+"users/login", method:.post,   parameters: parameters ).responseJSON{(response) in
-            let h = response.result.value
+       
             print("valor de verificar")
-            print(h)
-
+     
             switch response.result {
             
             case .success:

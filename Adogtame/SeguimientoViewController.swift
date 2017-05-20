@@ -22,18 +22,14 @@ class SeguimientoViewController: UIViewController, UITableViewDataSource {
         
         api = MascotasApi()
        dao = AdogtameDao()
+        data = dao.getByid(idusuario: UserDefaults().object(forKey: "id") as! String)!
+        
         api.ListarSeguimiento{(seguimientos) in
-            if seguimientos.count == 0 {
-            self.data = self.dao.getByid(idusuario: UserDefaults().object(forKey: "id") as! String)!
-                self.table.reloadData()
-                print(seguimientos)
-            }
-            else {
+            
             self.data = seguimientos
             self.table.reloadData()
-            print(seguimientos)
-            }
-        
+           
+            
         }
         
 

@@ -97,6 +97,8 @@ class DetailCatalogoViewController: UIViewController {
                 print("HOLAAA")
                 self.api1.AddApadrinados(nombre: self.mascota.nombre,imagen: self.mascota.imagen, descripcion: self.mascota.descripcion)
                 
+                
+                
               
             }
             
@@ -125,6 +127,7 @@ class DetailCatalogoViewController: UIViewController {
         }
         
         alertView.showTitle("Gracias por adoptar a \(mascota.nombre!)", subTitle: "Gracias por adoptar! Se envió a tu correo un formulario de adopción", style: .notice, colorStyle: 0x08AE9E, colorTextButton: 0xFFFFFF)
+        
         
         
     }

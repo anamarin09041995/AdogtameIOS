@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Adogtame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="BYZ-38-t0r" customClass="ViewController" customModule="Adogtame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -80,23 +80,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="lblPass" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYL-2k-8Uu">
-                                <rect key="frame" x="16" y="573" width="343" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="diH-b7-qCj"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="¿Olvidaste tu contraseña?">
-                                        <attributes>
-                                            <color key="NSColor" red="0.031372549019607843" green="0.68235294117647061" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            <integer key="NSUnderline" value="1"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="padlock.png" translatesAutoresizingMaskIntoConstraints="NO" id="PIF-LO-dBH">
                                 <rect key="frame" x="8" y="353" width="25" height="25"/>
                                 <constraints>
@@ -120,21 +103,17 @@
                             <constraint firstAttribute="trailing" secondItem="IUJ-6r-lvg" secondAttribute="trailing" id="2j0-BA-6Wg"/>
                             <constraint firstItem="RKG-yJ-eW3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6UB-Ac-fzH"/>
                             <constraint firstItem="3su-na-24h" firstAttribute="top" secondItem="RKG-yJ-eW3" secondAttribute="bottom" constant="119" id="7R5-SG-DKj"/>
-                            <constraint firstItem="eYL-2k-8Uu" firstAttribute="top" secondItem="7pD-sh-yPh" secondAttribute="bottom" constant="71" id="8GA-ML-MQY"/>
                             <constraint firstItem="PIF-LO-dBH" firstAttribute="top" secondItem="2QW-E6-hnD" secondAttribute="bottom" constant="40" id="8XU-16-TMU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eYL-2k-8Uu" secondAttribute="trailing" id="AcN-Sw-0Ax"/>
                             <constraint firstItem="PIF-LO-dBH" firstAttribute="top" secondItem="2QW-E6-hnD" secondAttribute="bottom" constant="40" id="D7b-KG-7Bz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IUJ-6r-lvg" secondAttribute="bottom" id="D95-ON-5Xf"/>
                             <constraint firstItem="RKG-yJ-eW3" firstAttribute="centerX" secondItem="3su-na-24h" secondAttribute="centerX" id="GYV-XJ-y8U"/>
                             <constraint firstItem="3su-na-24h" firstAttribute="top" secondItem="RKG-yJ-eW3" secondAttribute="bottom" constant="119" id="KYP-Il-DEC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3su-na-24h" secondAttribute="trailing" id="Kde-Pn-UZI"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eYL-2k-8Uu" secondAttribute="bottom" constant="73" id="O5i-BU-wuh"/>
                             <constraint firstItem="2QW-E6-hnD" firstAttribute="top" secondItem="RKG-yJ-eW3" secondAttribute="bottom" constant="119" id="OFk-X2-05K"/>
                             <constraint firstItem="PIF-LO-dBH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="OLn-Wf-FB9"/>
                             <constraint firstItem="IUJ-6r-lvg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QyN-E6-vdd"/>
                             <constraint firstItem="PIF-LO-dBH" firstAttribute="leading" secondItem="2QW-E6-hnD" secondAttribute="leading" id="SBF-8r-i3c"/>
                             <constraint firstItem="7pD-sh-yPh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U13-WQ-z0w"/>
-                            <constraint firstItem="eYL-2k-8Uu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VDS-w1-xde"/>
                             <constraint firstItem="2QW-E6-hnD" firstAttribute="top" secondItem="RKG-yJ-eW3" secondAttribute="bottom" constant="119" id="VoE-ef-inA"/>
                             <constraint firstItem="2QW-E6-hnD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="WqH-bT-a1d"/>
                             <constraint firstItem="3su-na-24h" firstAttribute="leading" secondItem="PIF-LO-dBH" secondAttribute="trailing" constant="8" id="a7s-kp-3dY"/>
@@ -144,6 +123,7 @@
                             <constraint firstItem="IUJ-6r-lvg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="i7I-Pl-gvF"/>
                             <constraint firstItem="3su-na-24h" firstAttribute="leading" secondItem="PIF-LO-dBH" secondAttribute="trailing" constant="8" symbolic="YES" id="ou6-ke-tOJ"/>
                             <constraint firstItem="3su-na-24h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="pdB-f9-rOG"/>
+                            <constraint firstItem="7pD-sh-yPh" firstAttribute="top" secondItem="3su-na-24h" secondAttribute="bottom" constant="90" id="rkD-2D-v69"/>
                             <constraint firstItem="2QW-E6-hnD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="tPL-QE-pLn"/>
                         </constraints>
                     </view>
@@ -311,6 +291,6 @@
         <image name="padlock.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fU5-tO-JP2"/>
+        <segue reference="RH8-N2-G33"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,29 +13,27 @@ class DonacionesViewController: UIViewController, UITableViewDataSource {
 
     var data: [Fundaciones] = []
     var api:MascotasApi!
-   
+    var indicador:UIActivityIndicatorView = UIActivityIndicatorView()
     @IBOutlet weak var table: UITableView!
     
     
     override func viewDidLoad() {
     
         super.viewDidLoad()
-        
+        indicador.center = self.view.center
+        indicador.hidesWhenStopped = true
+        indicador.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(indicador)
+        indicador.startAnimating()
         api = MascotasApi()
         api.ListarFundaciones{(arrayFundaciones) in
             self.data = arrayFundaciones
             print(self.data)
             self.table.reloadData()
+             self.indicador.stopAnimating()
         }
         
         
-        
-        
-        
-        
-        
-        
-
         // Do any additional setup after loading the view.
     }
     

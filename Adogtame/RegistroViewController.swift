@@ -10,7 +10,7 @@ import UIKit
 import SDWebImage
 
 class RegistroViewController: UIViewController {
-
+    var indicador:UIActivityIndicatorView = UIActivityIndicatorView()
     var api1:UsuariosApi!
     
     @IBOutlet weak var email: UITextField!
@@ -18,13 +18,19 @@ class RegistroViewController: UIViewController {
     @IBOutlet weak var pass: UITextField!
     
     @IBOutlet weak var city: UITextField!
-    
-    
+
     
     //Se crean variables para guardar datos del registro
     var info: String!
     
        @IBAction func registro(_ sender: Any) {
+        
+        indicador.center = self.view.center
+        indicador.hidesWhenStopped = true
+        indicador.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(indicador)
+        indicador.startAnimating()
+        
         
         let email = self.email.text!
         let password = pass.text!
@@ -32,25 +38,41 @@ class RegistroViewController: UIViewController {
         
         
         api1 = UsuariosApi()
-        api1.Verificar(email: email , password: password){(val) in
+        api1.Verificar(email: email ){(val) in
             if val {
             
             self.api1.regis(email: email, password: password, city: city)
-            print("USUARIO REGISTRADO")
+    
+            
+                self.api1.Login(email: email , password: password){(Usuario) in
+                    print(Usuario)
+                    
+                    if(email ==  Usuario.email && password == Usuario.password){
+                        UserDefaults().set(email, forKey: "email")
+                        UserDefaults().set(password, forKey: "passw")
+                        UserDefaults().set(Usuario.id, forKey: "id")
+                        UserDefaults().set(true, forKey: "logged")
+                        UserDefaults().set(Usuario.city, forKey: "city")
+                        
+                        self.performSegue(withIdentifier: "catalogo", sender: nil)
+                    }
+                    else {
+                        print("No esta el usuario")
+                    }
+                    
+                }
+
+            
             }
-           
+
+    
             else {
             
             print("USUARIO YA REGISTRADO ")
+                //AQUI VAAAAA ALERTAAAAAAAAAAAAA
+                
             }
-            
-                
-                
-                
-                
-                
-                
-            
+         self.indicador.stopAnimating()
         }
         
     }

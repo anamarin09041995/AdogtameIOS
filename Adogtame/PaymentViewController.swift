@@ -88,6 +88,14 @@ class PaymentViewController: UIViewController, PayPalPaymentDelegate {
         paymentViewController.dismiss(animated: true, completion: { () -> Void in
             // send completed confirmaion to your server
             print("Here is your proof of payment:\n\n\(completedPayment.confirmation)\n\nSend this to your server for confirmation and fulfillment.")
+            self.Alimento1.setImage(self.unchecked, for: UIControlState.normal)
+            self.implementos.setImage(self.unchecked, for: UIControlState.normal)
+        
+            self.bolso50.setImage(self.bolsa, for: UIControlState.normal)
+            self.bolsa20.setImage(self.bolsa, for: UIControlState.normal)
+            self.bolsa10.setImage(self.bolsa, for: UIControlState.normal)
+            self.bolso30.setImage(self.bolsa, for: UIControlState.normal)
+            
         
          
         })
