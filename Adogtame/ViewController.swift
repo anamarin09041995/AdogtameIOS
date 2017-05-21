@@ -33,18 +33,36 @@ class ViewController: UIViewController {
         
     }
     
+    
     @IBAction func login(_ sender: Any) {
         
-        
+        if((user.text?.isEmpty)! || (pass.text?.isEmpty)!){
+            
+            let appearance = SCLAlertView.SCLAppearance(
+                kTitleFont: UIFont(name: "HelveticaNeue", size: 18)!,
+                kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
+                kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
+                showCloseButton: false
+            )
+            
+            let alertView = SCLAlertView(appearance: appearance)
+            
+            alertView.addButton("Ok") {
+                print("Ok")
+            }
+            
+            alertView.showInfo("Campos vacios", subTitle: "Por favor ingrese informacion en todos los campos")
+            
+        }else{
+
         indicador.center = self.view.center
         indicador.hidesWhenStopped = true
         indicador.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         view.addSubview(indicador)
-      
 
         let passw = pass.text!
         let email = user.text!
-
+        
         
         api1 = UsuariosApi()
 
@@ -66,9 +84,10 @@ class ViewController: UIViewController {
                        
                         self.performSegue(withIdentifier: "login", sender: nil)
                     }
-            
                     
                 }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

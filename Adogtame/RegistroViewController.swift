@@ -28,7 +28,24 @@ class RegistroViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func registro(_ sender: Any) {
        
+        if((email.text?.isEmpty)! || (pass.text?.isEmpty)!) || (city.text?.isEmpty)!{
             
+            let appearance = SCLAlertView.SCLAppearance(
+                kTitleFont: UIFont(name: "HelveticaNeue", size: 18)!,
+                kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
+                kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
+                showCloseButton: false
+            )
+            
+            let alertView = SCLAlertView(appearance: appearance)
+            
+            alertView.addButton("Ok") {
+                print("Ok")
+            }
+            
+            alertView.showInfo("Campos vacios", subTitle: "Por favor ingrese informacion en todos los campos")
+            
+        }else{
             indicador.center = self.view.center
             indicador.hidesWhenStopped = true
             indicador.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
@@ -72,7 +89,7 @@ class RegistroViewController: UIViewController, UITextFieldDelegate {
                     
                 }
             }
-        
+        }
     }
 
     override func viewDidLoad() {

@@ -68,7 +68,7 @@ class DetailCatalogoViewController: UIViewController {
         
         
         let appearance = SCLAlertView.SCLAppearance(
-            kTitleFont: UIFont(name: "HelveticaNeue", size: 20)!,
+            kTitleFont: UIFont(name: "HelveticaNeue", size: 16)!,
             kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
             kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
             showCloseButton: false

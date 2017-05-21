@@ -44,7 +44,6 @@ class UsuariosApi{
                 }
                 
             else {
-                
                 let appearance = SCLAlertView.SCLAppearance(
                     kTitleFont: UIFont(name: "HelveticaNeue", size: 18)!,
                     kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
@@ -58,8 +57,7 @@ class UsuariosApi{
                     print("Ok")
                 }
                 
-                alertView.showError("Usuario no registrado", subTitle: "Por favor intenta nuevamente, chequea que todos los campos esten llenos o registrate")
-                
+                alertView.showError("Usuario no registrado", subTitle: "Por favor intenta nuevamente o registrate")
                 print("EL USUARIO NO SE ENCUENTRA REGISTRADO")
                 }
                 
