@@ -29,7 +29,7 @@ class RegistroViewController: UIViewController {
         indicador.hidesWhenStopped = true
         indicador.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         view.addSubview(indicador)
-        indicador.startAnimating()
+      
         
         
         let email = self.email.text!
@@ -38,44 +38,58 @@ class RegistroViewController: UIViewController {
         
         
         api1 = UsuariosApi()
-        api1.Verificar(email: email ){(val) in
-            if val {
-            
-            self.api1.regis(email: email, password: password, city: city)
-    
-            
-                self.api1.Login(email: email , password: password){(Usuario) in
-                    print(Usuario)
+        
+        self.api1.regis(email: email, password: password, city: city){(booleano) in
+        
+            if booleano {
+                
+            self.api1.Login(email: email , password: password){(Usuario) in
+                print(Usuario)
+                
+                if(email ==  Usuario.email && password == Usuario.password){
+                    UserDefaults().set(email, forKey: "email")
+                    UserDefaults().set(password, forKey: "passw")
+                    UserDefaults().set(Usuario.id, forKey: "id")
+                    UserDefaults().set(true, forKey: "logged")
+                    UserDefaults().set(Usuario.city, forKey: "city")
                     
-                    if(email ==  Usuario.email && password == Usuario.password){
-                        UserDefaults().set(email, forKey: "email")
-                        UserDefaults().set(password, forKey: "passw")
-                        UserDefaults().set(Usuario.id, forKey: "id")
-                        UserDefaults().set(true, forKey: "logged")
-                        UserDefaults().set(Usuario.city, forKey: "city")
-                        
-                        self.performSegue(withIdentifier: "catalogo", sender: nil)
-                    }
-                    else {
-                        print("No esta el usuario")
-                    }
+                    self.performSegue(withIdentifier: "catalogo", sender: nil)
                     
-                }
-
+             
+                                                                            }
+                                                            }
             
-            }
-
-    
+                print("REGISTRADO CON EXITO")
+                        }
+            
             else {
-            
-            print("USUARIO YA REGISTRADO ")
-                //AQUI VAAAAA ALERTAAAAAAAAAAAAA
+                
+                print("USUARIO YA EXISTE")
                 
             }
-         self.indicador.stopAnimating()
-        }
+
+            
         
+        }
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                    
     }
+
+    
+            
+
+    
+        
         
         
     

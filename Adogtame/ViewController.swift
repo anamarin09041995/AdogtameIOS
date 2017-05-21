@@ -39,23 +39,20 @@ class ViewController: UIViewController {
         indicador.hidesWhenStopped = true
         indicador.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         view.addSubview(indicador)
-        indicador.startAnimating()
+      
 
         let passw = pass.text!
         let email = user.text!
 
         
         api1 = UsuariosApi()
-        
-        
-        api1.Verificar(email: email ){(val) in
-        
 
-            if !val {
-            
+         
                 self.api1.Login(email: email , password: passw){(Usuario) in
+                    
+                    
                     print(Usuario)
-                    self.navigationController?.dismiss(animated: true, completion: nil)
+
                     if(email ==  Usuario.email && passw == Usuario.password){
                         UserDefaults().set(email, forKey: "email")
                         UserDefaults().set(passw, forKey: "passw")
@@ -65,29 +62,28 @@ class ViewController: UIViewController {
                         UserDefaults().set(Usuario.city, forKey: "city")
                         
                         print(self.userD.string(forKey: "email")!)
-                        
+                       
                         self.performSegue(withIdentifier: "login", sender: nil)
-                    }
+                        
                    
+                            
+                        
+                        
+
+                    }
+            
                     
                 }
+   
 
-            
-            } // CIERRA IF 
+        
+    
         
             
-            
-            else {
-            
-            print("EL USUARIO NO ESTA REGISTRADO")
-                //AQUIIIII VA ALERTAAAAAAAA
-                
-            }
-        self.indicador.stopAnimating()
+       
         }
    
-        
-    }
+    
     
     
     

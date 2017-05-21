@@ -37,7 +37,6 @@
 		ACB66F910D487DB29B9DD7FB /* Pods_Adogtame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59FA7C6F429958253E927CE2 /* Pods_Adogtame.framework */; };
 		BC1D20701EC4FF3000398344 /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1D206F1EC4FF3000398344 /* Payment.storyboard */; };
 		BC1D20741EC5013100398344 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1D20731EC5013100398344 /* PaymentViewController.swift */; };
-		BC1D20781EC52E8B00398344 /* Money Bag-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BC1D20771EC52E8B00398344 /* Money Bag-50.png */; };
 		BC507E441ECCA9360077E217 /* UsuariosApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC507E431ECCA9360077E217 /* UsuariosApi.swift */; };
 		BC507E461ECCB2010077E217 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC507E451ECCB2010077E217 /* User.swift */; };
 		BC507E481ECD4F6C0077E217 /* MascotaSeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC507E471ECD4F6C0077E217 /* MascotaSeg.swift */; };
@@ -94,7 +93,6 @@
 		59FA7C6F429958253E927CE2 /* Pods_Adogtame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Adogtame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC1D206F1EC4FF3000398344 /* Payment.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
 		BC1D20731EC5013100398344 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
-		BC1D20771EC52E8B00398344 /* Money Bag-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Money Bag-50.png"; path = "../../../Downloads/Money Bag-50.png"; sourceTree = "<group>"; };
 		BC507E431ECCA9360077E217 /* UsuariosApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuariosApi.swift; sourceTree = "<group>"; };
 		BC507E451ECCB2010077E217 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BC507E471ECD4F6C0077E217 /* MascotaSeg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MascotaSeg.swift; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				2D253CBF1EC0EF47007E2C95 /* avatar.png */,
-				BC1D20771EC52E8B00398344 /* Money Bag-50.png */,
 				2D253CC01EC0EF47007E2C95 /* dollar-coins.png */,
 				BC5B8DB11ECE0C9000C68C40 /* Checked.png */,
 				BC5B8DB31ECE0CAC00C68C40 /* Unchecked.png */,
@@ -350,7 +347,6 @@
 				2D253CCE1EC0EF47007E2C95 /* phone-contact.png in Resources */,
 				2D253CCB1EC0EF47007E2C95 /* house.png in Resources */,
 				2DA2BCFA1EBA318A0072748F /* Catalogo.storyboard in Resources */,
-				BC1D20781EC52E8B00398344 /* Money Bag-50.png in Resources */,
 				2DA2BCF21EBA22A30072748F /* LaunchScreen.storyboard in Resources */,
 				2D253CCC1EC0EF47007E2C95 /* padlock.png in Resources */,
 				2DA2BCEF1EBA22A30072748F /* Assets.xcassets in Resources */,

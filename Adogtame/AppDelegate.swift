@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         var bool: Bool = false
-        UserDefaults().set(false, forKey: "logged")
+       // UserDefaults().set(false, forKey: "logged")
           bool = UserDefaults().object(forKey: "logged") as! Bool
       
     
