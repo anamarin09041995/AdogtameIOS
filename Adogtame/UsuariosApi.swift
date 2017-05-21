@@ -7,8 +7,8 @@
 //
 
 import Foundation
-
 import Alamofire
+import SCLAlertView
 
 class UsuariosApi{
 
@@ -44,6 +44,21 @@ class UsuariosApi{
                 }
                 
             else {
+                
+                let appearance = SCLAlertView.SCLAppearance(
+                    kTitleFont: UIFont(name: "HelveticaNeue", size: 18)!,
+                    kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
+                    kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
+                    showCloseButton: false
+                )
+                
+                let alertView = SCLAlertView(appearance: appearance)
+                
+                alertView.addButton("Ok") {
+                    print("Ok")
+                }
+                
+                alertView.showError("Usuario no registrado", subTitle: "Por favor intenta nuevamente, chequea que todos los campos esten llenos o registrate")
                 
                 print("EL USUARIO NO SE ENCUENTRA REGISTRADO")
                 }
@@ -135,6 +150,21 @@ class UsuariosApi{
       
             let succ = json["success"] as! Bool
             if !succ {
+                
+                let appearance = SCLAlertView.SCLAppearance(
+                    kTitleFont: UIFont(name: "HelveticaNeue", size: 18)!,
+                    kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
+                    kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
+                    showCloseButton: false
+                )
+                
+                let alertView = SCLAlertView(appearance: appearance)
+                
+                alertView.addButton("Ok") {
+                    print("Ok")
+                }
+                
+                alertView.showError("Este usuario ya existe", subTitle: "Por favor intenta nuevamente con una cuenta diferente")
             
             print ("el usuario ya existe")
                 callback (false)

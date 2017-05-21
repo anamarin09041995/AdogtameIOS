@@ -14,7 +14,7 @@ class VoluntariadoCell: UITableViewCell {
     
     @IBOutlet weak var nombre: UITextView!
     
-    @IBOutlet weak var direccion: UILabel!
+    @IBOutlet weak var direccion: UITextView!
     
     @IBOutlet weak var contacto: UILabel!
     

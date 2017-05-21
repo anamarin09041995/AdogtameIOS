@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DLRadioButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>KDCircularProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SQLite.swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>libwebp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,12 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7415EEA802BE7407C670CFEEB3B49FCA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7FE9916FD6C8F77A5D355EFD018C0419</key>
+		<key>59F40FC8082F9EA91051BD01855170BF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +67,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ECCD2A306CD222A85F0893A1EEBAF03B</key>
+		<key>BB2FB94B27911B1A5BEE9F9B981F5BBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D462626C3089DA03CCEB9734D7FA982F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA48B6AEE7E26BC1D3237A6F93203F90</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6A77E2753C279F67F70C5C21D6FAE15</key>
 		<dict>
 			<key>primary</key>
 			<true/>

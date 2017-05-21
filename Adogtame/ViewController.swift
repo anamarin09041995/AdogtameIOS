@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SCLAlertView
 
 class ViewController: UIViewController {
     
@@ -64,32 +65,11 @@ class ViewController: UIViewController {
                         print(self.userD.string(forKey: "email")!)
                        
                         self.performSegue(withIdentifier: "login", sender: nil)
-                        
-                   
-                            
-                        
-                        
-
                     }
             
                     
                 }
-   
-
-        
-    
-        
-            
-       
-        }
-   
-    
-    
-    
-    
-    
-    
-    
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

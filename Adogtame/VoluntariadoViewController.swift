@@ -85,7 +85,7 @@ var indicador:UIActivityIndicatorView = UIActivityIndicatorView()
         let f = data[indexPath.row]
         
         let appearance = SCLAlertView.SCLAppearance(
-            kTitleFont: UIFont(name: "HelveticaNeue", size: 20)!,
+            kTitleFont: UIFont(name: "HelveticaNeue", size: 18)!,
             kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
             kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
             showCloseButton: false
@@ -93,9 +93,6 @@ var indicador:UIActivityIndicatorView = UIActivityIndicatorView()
         
         let alertView = SCLAlertView(appearance: appearance)
         
-        alertView.addButton("Cancelar"){
-            print("Cancelar")
-        }
         alertView.addButton("Ok") {
             print("Ok")
             self.navigationController?.popViewController(animated: true)

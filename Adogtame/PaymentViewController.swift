@@ -26,7 +26,8 @@ class PaymentViewController: UIViewController, PayPalPaymentDelegate {
     
     
     
-    @IBOutlet weak var nombre: UILabel!
+    @IBOutlet weak var nombre: UITextView!
+   
     var fundacion: Fundaciones!
     var pressed: String = ""
     var value : String = ""

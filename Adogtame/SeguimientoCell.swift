@@ -12,8 +12,7 @@ class SeguimientoCell: UITableViewCell {
 
     @IBOutlet weak var img: UIImageView!
     
-    @IBOutlet weak var nombre: UILabel!
-    
+    @IBOutlet weak var nombre: UITextView!
     
     @IBOutlet weak var descripcion: UITextView!
     

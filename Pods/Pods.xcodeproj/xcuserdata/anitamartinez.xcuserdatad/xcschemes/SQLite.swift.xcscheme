@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EA48B6AEE7E26BC1D3237A6F93203F90"
-               BuildableName = "Pods_Adogtame.framework"
-               BlueprintName = "Pods-Adogtame"
+               BlueprintIdentifier = "59F40FC8082F9EA91051BD01855170BF"
+               BuildableName = "SQLite.framework"
+               BlueprintName = "SQLite.swift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EA48B6AEE7E26BC1D3237A6F93203F90"
-            BuildableName = "Pods_Adogtame.framework"
-            BlueprintName = "Pods-Adogtame"
+            BlueprintIdentifier = "59F40FC8082F9EA91051BD01855170BF"
+            BuildableName = "SQLite.framework"
+            BlueprintName = "SQLite.swift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

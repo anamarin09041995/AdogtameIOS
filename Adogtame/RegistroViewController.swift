@@ -8,8 +8,10 @@
 
 import UIKit
 import SDWebImage
+import SCLAlertView
 
-class RegistroViewController: UIViewController {
+class RegistroViewController: UIViewController, UITextFieldDelegate {
+    
     var indicador:UIActivityIndicatorView = UIActivityIndicatorView()
     var api1:UsuariosApi!
     
@@ -23,79 +25,55 @@ class RegistroViewController: UIViewController {
     //Se crean variables para guardar datos del registro
     var info: String!
     
-       @IBAction func registro(_ sender: Any) {
-        
-        indicador.center = self.view.center
-        indicador.hidesWhenStopped = true
-        indicador.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        view.addSubview(indicador)
-      
-        
-        
-        let email = self.email.text!
-        let password = pass.text!
-        let city = self.city.text!
-        
-        
-        api1 = UsuariosApi()
-        
-        self.api1.regis(email: email, password: password, city: city){(booleano) in
-        
-            if booleano {
-                
-            self.api1.Login(email: email , password: password){(Usuario) in
-                print(Usuario)
-                
-                if(email ==  Usuario.email && password == Usuario.password){
-                    UserDefaults().set(email, forKey: "email")
-                    UserDefaults().set(password, forKey: "passw")
-                    UserDefaults().set(Usuario.id, forKey: "id")
-                    UserDefaults().set(true, forKey: "logged")
-                    UserDefaults().set(Usuario.city, forKey: "city")
-                    
-                    self.performSegue(withIdentifier: "catalogo", sender: nil)
-                    
-             
-                                                                            }
-                                                            }
+    
+    @IBAction func registro(_ sender: Any) {
+       
             
-                print("REGISTRADO CON EXITO")
+            indicador.center = self.view.center
+            indicador.hidesWhenStopped = true
+            indicador.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+            view.addSubview(indicador)
+            
+            
+            
+            let email = self.email.text!
+            let password = pass.text!
+            let city = self.city.text!
+            
+            
+            api1 = UsuariosApi()
+            
+            self.api1.regis(email: email, password: password, city: city){(booleano) in
+                
+                if booleano {
+                    
+                    self.api1.Login(email: email , password: password){(Usuario) in
+                        print(Usuario)
+                        
+                        if(email ==  Usuario.email && password == Usuario.password){
+                            UserDefaults().set(email, forKey: "email")
+                            UserDefaults().set(password, forKey: "passw")
+                            UserDefaults().set(Usuario.id, forKey: "id")
+                            UserDefaults().set(true, forKey: "logged")
+                            UserDefaults().set(Usuario.city, forKey: "city")
+                            
+                            self.performSegue(withIdentifier: "catalogo", sender: nil)
+                            
+                            
                         }
-            
-            else {
-                
-                print("USUARIO YA EXISTE")
-                
-            }
-
-            
-        
-        }
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+                    }
                     
+                    print("REGISTRADO CON EXITO")
+                }
+                    
+                else {
+                    
+                    print("USUARIO YA EXISTE")
+                    
+                }
+            }
+        
     }
-
-    
-            
-
-    
-        
-        
-        
-    
-        
-      
-        
 
     override func viewDidLoad() {
         super.viewDidLoad()
